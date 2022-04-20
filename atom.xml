@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-20T08:31:12.161Z</updated>
+  <updated>2022-04-20T12:40:10.515Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ros-learning</title>
+    <link href="http://example.com/2022/04/20/ros-learning/"/>
+    <id>http://example.com/2022/04/20/ros-learning/</id>
+    <published>2022-04-20T12:04:00.000Z</published>
+    <updated>2022-04-20T12:40:10.515Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ROS教程"><a href="#ROS教程" class="headerlink" title="ROS教程"></a>ROS教程</h1><p><a href="https://wiki.ros.org/ROS/Tutorials">教程</a>基本上就是翻译教程加一点自己的理解</p><h2 id="入门级"><a href="#入门级" class="headerlink" title="入门级"></a>入门级</h2><h3 id="ROS文件系统"><a href="#ROS文件系统" class="headerlink" title="ROS文件系统"></a>ROS文件系统</h3><p>我决定重新架构以下roswiki上的教程，将以下三种合并为该篇ROS文件系统</p><ol><li>Navigating The Filesystem</li><li>Creating a ROS package</li><li>Building a ROS package</li></ol><h4 id="为什么要有包"><a href="#为什么要有包" class="headerlink" title="为什么要有包"></a>为什么要有包</h4><p>当我们编写HelloWorld的时候，我们当然不需要包这样的内容存在</p><h4 id="包是什么怎么组织的怎么用"><a href="#包是什么怎么组织的怎么用" class="headerlink" title="包是什么怎么组织的怎么用"></a>包是什么怎么组织的怎么用</h4><h4 id="为什么要有清单以及清单的作用"><a href="#为什么要有清单以及清单的作用" class="headerlink" title="为什么要有清单以及清单的作用"></a>为什么要有清单以及清单的作用</h4><h4 id="清单是什么怎么组织的怎么用"><a href="#清单是什么怎么组织的怎么用" class="headerlink" title="清单是什么怎么组织的怎么用"></a>清单是什么怎么组织的怎么用</h4><h4 id="工作空间目录为什么是这样的"><a href="#工作空间目录为什么是这样的" class="headerlink" title="工作空间目录为什么是这样的"></a>工作空间目录为什么是这样的</h4><h4 id="什么是工作空间工作空间目录是什么样的"><a href="#什么是工作空间工作空间目录是什么样的" class="headerlink" title="什么是工作空间工作空间目录是什么样的"></a>什么是工作空间工作空间目录是什么样的</h4><p>如何实现一些命令呢？</p><p>一个包包含库，可执行文件，脚本文件以及其他内容</p><h4 id="清单"><a href="#清单" class="headerlink" title="清单"></a>清单</h4><p>(package.xml)用来描述一个包——包括定义包间的依赖与存储有关包的元信息</p><p>（操作系统的文件系统，广义的文件系统，怎么作对比）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;ROS教程&quot;&gt;&lt;a href=&quot;#ROS教程&quot; class=&quot;headerlink&quot; title=&quot;ROS教程&quot;&gt;&lt;/a&gt;ROS教程&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://wiki.ros.org/ROS/Tutorials&quot;&gt;教程&lt;/a&gt;基本上就是翻译</summary>
+      
+    
+    
+    
+    
+    <category term="robot" scheme="http://example.com/tags/robot/"/>
+    
+  </entry>
   
   <entry>
     <title>Gazebo-Ros-env-building</title>

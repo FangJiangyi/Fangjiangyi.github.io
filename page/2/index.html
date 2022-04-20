@@ -277,6 +277,246 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/11/vim/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Pernol Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/08/11/vim/" itemprop="url">vim</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-08-11T14:54:25+08:00">
+                2021-08-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/notebook-code-editor/" itemprop="url" rel="index">
+                    <span itemprop="name">notebook - code - editor</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>vim</strong> 作为linux下最强大的编辑器，我先行学习使用也是为了便于后续进一步进行编程。</p>
+<ul>
+<li><a href="#lesson-1">Lesson 1</a><ul>
+<li><a href="#cursor-move">cursor move</a></li>
+<li><a href="#start-vim-from-the-shell-prompt-type">start vim from the shell prompt type</a></li>
+<li><a href="#delete-the-charactor-at-the-cursor-type">delete the charactor at the cursor type</a></li>
+<li><a href="#to-insert-or-append-text-type">To insert or append text type</a></li>
+</ul>
+</li>
+<li><a href="#lesson-2">Lesson 2</a><ul>
+<li><a href="#deletion-commands">DELETION COMMANDS</a></li>
+<li><a href="#move-to-the-start">MOVE TO THE START</a></li>
+<li><a href="#undo-commands">UNDO COMMANDS</a></li>
+</ul>
+</li>
+<li><a href="#lesson-3">Lesson 3</a><ul>
+<li><a href="#the-put-command">THE PUT COMMAND</a></li>
+<li><a href="#the-replace-command">THE REPLACE COMMAND</a></li>
+<li><a href="#the-change-operator">THE CHANGE OPERATOR</a></li>
+</ul>
+</li>
+<li><a href="#lesson-4">Lesson 4</a><ul>
+<li><a href="#goto-command">GOTO COMMAND</a></li>
+<li><a href="#the-search-command">THE SEARCH COMMAND</a></li>
+<li><a href="#the-match-command">THE MATCH COMMAND</a></li>
+<li><a href="#thesubstitute-command">THE　SUBSTITUTE COMMAND</a></li>
+</ul>
+</li>
+<li><a href="#execute-an-external-command">EXECUTE AN EXTERNAL COMMAND</a><ul>
+<li><a href="#write-files">WRITE FILES</a></li>
+<li><a href="#more-on-write-files">MORE ON WRITE FILES</a></li>
+<li><a href="#retrieving-and-merging-files">RETRIEVING AND MERGING files</a></li>
+</ul>
+</li>
+<li><a href="#lesson-6">Lesson 6</a></li>
+<li><a href="#lesson-7">Lesson 7</a><ul>
+<li><a href="#completion">COMPLETION</a></li>
+</ul>
+</li>
+</ul>
+<p>模式分类</p>
+<ol>
+<li>command mode</li>
+<li>insert mode</li>
+</ol>
+<p>这种模式分类可以使我们利用键盘完成全部任务，不必分心去动鼠标。<br>有关模式切换，现下只了解两点：</p>
+<ul>
+<li>无论当前处于何种mode输入Esc总可以退回到command mode。</li>
+<li>press i enter insert mode</li>
+</ul>
+<h1 id="Lesson-1"><a href="#Lesson-1" class="headerlink" title="Lesson 1"></a>Lesson 1</h1><h2 id="cursor-move"><a href="#cursor-move" class="headerlink" title="cursor move"></a>cursor move</h2><p>h(left) &emsp; j(down) &emsp;   k(up) &emsp; l(right)</p>
+<h2 id="start-vim-from-the-shell-prompt-type"><a href="#start-vim-from-the-shell-prompt-type" class="headerlink" title="start vim from the shell prompt type"></a>start vim from the shell prompt type</h2><p>command: vim FILENAME &lt;ENTER&gt;</p>
+<h2 id="delete-the-charactor-at-the-cursor-type"><a href="#delete-the-charactor-at-the-cursor-type" class="headerlink" title="delete the charactor at the cursor type"></a>delete the charactor at the cursor type</h2><p>x</p>
+<h2 id="To-insert-or-append-text-type"><a href="#To-insert-or-append-text-type" class="headerlink" title="To insert or append text type"></a>To insert or append text type</h2><ul>
+<li>i &emsp; type inserted text:insert before the cursor</li>
+<li>A&emsp; type inserted text &lt;ESC&gt;: append after the line</li>
+</ul>
+<h1 id="Lesson-2"><a href="#Lesson-2" class="headerlink" title="Lesson 2"></a>Lesson 2</h1><h2 id="DELETION-COMMANDS"><a href="#DELETION-COMMANDS" class="headerlink" title="DELETION COMMANDS"></a>DELETION COMMANDS</h2><p>dw to delete a word when we are in the command mode.</p>
+<p>d$ to delete to the end of the linewhen we are in the command mode.</p>
+<p><strong>command grammar</strong><br>operator [count] motion</p>
+<p>[x] x means the element of the set of parameters that can be put onto that location.</p>
+<p>operator:</p>
+<p>Now we just learn d operator for delete.</p>
+<p>motion:</p>
+<ul>
+<li>w - until the start or the next word, EXCLUDING its first character.</li>
+<li>e - to the end of the current word, INCLUDING the last character.</li>
+<li>$ - to the end of line, INCLUDING the last character.<br>For example, d2w means delete 2 words from the cursor.</li>
+</ul>
+<h2 id="MOVE-TO-THE-START"><a href="#MOVE-TO-THE-START" class="headerlink" title="MOVE TO THE START"></a>MOVE TO THE START</h2><p>type 0</p>
+<h2 id="UNDO-COMMANDS"><a href="#UNDO-COMMANDS" class="headerlink" title="UNDO COMMANDS"></a>UNDO COMMANDS</h2><p>To undo previous actions, type: &emsp;&emsp;&emsp;u &emsp;(lowercase u)<br>To undo all the changes on a line, type: &emsp;&emsp;&emsp;U &emsp;(uppercase U)<br>To undo the undo’s, type: &emsp;&emsp;&emsp;CTRL-R</p>
+<h1 id="Lesson-3"><a href="#Lesson-3" class="headerlink" title="Lesson 3"></a>Lesson 3</h1><h2 id="THE-PUT-COMMAND"><a href="#THE-PUT-COMMAND" class="headerlink" title="THE PUT COMMAND"></a>THE PUT COMMAND</h2><p>function:Type p to put previously deleted text after the cursor.</p>
+<h2 id="THE-REPLACE-COMMAND"><a href="#THE-REPLACE-COMMAND" class="headerlink" title="THE REPLACE COMMAND"></a>THE REPLACE COMMAND</h2><p>function type rx to replace the character at the cursor with x.(under the condition that it is in the command mode)</p>
+<h2 id="THE-CHANGE-OPERATOR"><a href="#THE-CHANGE-OPERATOR" class="headerlink" title="THE CHANGE OPERATOR"></a>THE CHANGE OPERATOR</h2><p>grammar:<br>operator [number] motion<br>c$(from the line where cursor is placed)<br>c2e<br>…</p>
+<h1 id="Lesson-4"><a href="#Lesson-4" class="headerlink" title="Lesson 4"></a>Lesson 4</h1><h2 id="GOTO-COMMAND"><a href="#GOTO-COMMAND" class="headerlink" title="GOTO COMMAND"></a>GOTO COMMAND</h2><p>CTRL-G:show information about the current file and current line’s number.<br>G go to the last line of the file<br>gg go to the first line of the file<br>[number] G go to the numberth line of the file</p>
+<h2 id="THE-SEARCH-COMMAND"><a href="#THE-SEARCH-COMMAND" class="headerlink" title="THE SEARCH COMMAND"></a>THE SEARCH COMMAND</h2><p>type / followed by a  phrase to search for the phrase<br>n:next(in one direction)<br>N:Next(in the other direction)<br>?:search for a phrase in the backward direction.<br>CTRL-o go back to where you came from<br>CTRL-i goes forward</p>
+<h2 id="THE-MATCH-COMMAND"><a href="#THE-MATCH-COMMAND" class="headerlink" title="THE MATCH COMMAND"></a>THE MATCH COMMAND</h2><p>% is used to match ‘{}’,’[]’ and ‘()’</p>
+<h2 id="THE-SUBSTITUTE-COMMAND"><a href="#THE-SUBSTITUTE-COMMAND" class="headerlink" title="THE　SUBSTITUTE COMMAND"></a>THE　SUBSTITUTE COMMAND</h2><p>decide what function these commands below means:</p>
+<p>s/old/new(/g)<br>#,#s/old/new/g<br>%s/old/new/g<br>%s/old/new/gc</p>
+<h1 id="EXECUTE-AN-EXTERNAL-COMMAND"><a href="#EXECUTE-AN-EXTERNAL-COMMAND" class="headerlink" title="EXECUTE AN EXTERNAL COMMAND"></a>EXECUTE AN EXTERNAL COMMAND</h1><p>type :! followed by an external command to execute that command</p>
+<h2 id="WRITE-FILES"><a href="#WRITE-FILES" class="headerlink" title="WRITE FILES"></a>WRITE FILES</h2><p>:w FILENAME</p>
+<h2 id="MORE-ON-WRITE-FILES"><a href="#MORE-ON-WRITE-FILES" class="headerlink" title="MORE ON WRITE FILES"></a>MORE ON WRITE FILES</h2><p>v motion :w FILENAME</p>
+<h2 id="RETRIEVING-AND-MERGING-files"><a href="#RETRIEVING-AND-MERGING-files" class="headerlink" title="RETRIEVING AND MERGING files"></a>RETRIEVING AND MERGING files</h2><p>:r FILENAME: to insert the contents of a file——retrieves disk file FILENAME and puts it below the cursor position</p>
+<h1 id="Lesson-6"><a href="#Lesson-6" class="headerlink" title="Lesson 6"></a>Lesson 6</h1><ol>
+<li>Type o to open a line BELOW　the cursor and start Insert mode.</li>
+<li>Type O to open a line ABOVE the cursor.</li>
+<li>Type a to insert text AFTER the cursor.</li>
+<li>Type A to insert text after the end of the line.</li>
+<li>The y(for yank) operator yanks text, p puts (pastes) it.</li>
+<li>Typing a capital R enters Replace mode until &lt;ESC&gt; is pressed.</li>
+<li>Typing “:set xxx” sets the option “xxx”. Some options are:</li>
+</ol>
+<ul>
+<li>‘ic’ ‘ignorecase</li>
+<li>‘is’ ‘incsearch’</li>
+<li>‘hls’ ‘hlsearch’</li>
+</ul>
+<p>what are these three options means?</p>
+<h1 id="Lesson-7"><a href="#Lesson-7" class="headerlink" title="Lesson 7"></a>Lesson 7</h1><h2 id="COMPLETION"><a href="#COMPLETION" class="headerlink" title="COMPLETION"></a>COMPLETION</h2><p>CTRL-D and &lt;TAB&gt; 但是貌似只能在命令模式下补全。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/11/cppLearning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -901,7 +1141,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -918,6 +1158,15 @@
             </div>
           
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
           
 
         </nav>
