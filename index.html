@@ -85,7 +85,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="Pernol Blog" type="application/atom+xml" />
 
 
 
@@ -98,9 +98,9 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="Pernol Blog">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Pernol Blog">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
@@ -138,7 +138,7 @@
 
 
 
-  <title>Hexo</title>
+  <title>Pernol Blog</title>
   
 
 
@@ -180,7 +180,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">Pernol Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -286,7 +286,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Pernol Blog">
     </span>
 
     
@@ -376,14 +376,14 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install python-rosdep</span><br></pre></td></tr></table></figure>
 <p>然后</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rosdep init</span><br><span class="line">rosdep update</span><br></pre></td></tr></table></figure>
-<p>这个rosdep update命令经常报超时的错如：<br><img src="/2022-04-20-Gazebo-Ros-env-building/rosdep_error.png" alt="rosdep超时"><br>我们不妨打开看看这个/etc/ros/rosdep/sources.list.d 到底是个他妈何方神圣。</p>
+<p>这个rosdep update命令经常报超时的错如：<br><img src="/img/rosdep_error.png" alt="rosdep超时"><br>我们不妨打开看看这个/etc/ros/rosdep/sources.list.d 到底是个他妈何方神圣。</p>
 <p>进入管理员模式</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br></pre></td></tr></table></figure>
 <p>进入到该目录下</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/ros/rosdep/sources.list.d</span><br></pre></td></tr></table></figure>
-<p>ls一下看看都有啥傻逼东西<br><img src="/2022-04-20-Gazebo-Ros-env-building/rosdep_error2.png" alt="sources.list.d"></p>
+<p>ls一下看看都有啥傻逼东西<br><img src="/img/rosdep_error2.png" alt="sources.list.d"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gedit 20-default.list</span><br></pre></td></tr></table></figure>
-<p><img src="/2022-04-20-Gazebo-Ros-env-building/rosdep_error3.png" alt="20-default.list"><br>我们分析一下这个文件，给出了个https的网址，然后如果我们访问这个网址，发现这个raw.githubxxx的东西在不科学上网的前提下非常容易超时，所以大概可以猜测到，就是我们需要访问这个网站去获取一些安装信息，但这个网站和github相关，所以。。。</p>
+<p><img src="/img/rosdep_error3.png" alt="20-default.list"><br>我们分析一下这个文件，给出了个https的网址，然后如果我们访问这个网址，发现这个raw.githubxxx的东西在不科学上网的前提下非常容易超时，所以大概可以猜测到，就是我们需要访问这个网站去获取一些安装信息，但这个网站和github相关，所以。。。</p>
 <h2 id="1-6-傻逼问题的解决方法"><a href="#1-6-傻逼问题的解决方法" class="headerlink" title="$ 1.6 傻逼问题的解决方法"></a>$ 1.6 傻逼问题的解决方法</h2><p>一劳永逸的解决方法是科学上网，然而我暂时并不想这样，我之前用过类似的解决方法是把它在线访问的东西下载到本地，然后改python脚本直接离线安装。不过这次发现了更加快速的方法：<a target="_blank" rel="noopener" href="https://ghproxy.com/%E4%BB%A3%E7%90%86%E5%8A%A0%E9%80%9F%E3%80%82">https://ghproxy.com/代理加速。</a><br>把所有需要访问raw.githubxxx的脚本代码前面都加一个这个<a target="_blank" rel="noopener" href="https://ghproxy.com/%E6%B1%87%E6%80%BB%E4%B8%80%E4%B8%8B%E6%80%BB%E5%85%B1%E6%9C%89%EF%BC%9A">https://ghproxy.com/汇总一下总共有：</a></p>
 <p>进入该源文件</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/lib/python2.7/dist-packages/rosdep2/sources_list.py</span><br></pre></td></tr></table></figure>
@@ -453,7 +453,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Pernol Blog">
     </span>
 
     
@@ -636,7 +636,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Pernol Blog">
     </span>
 
     
@@ -764,7 +764,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Pernol Blog">
     </span>
 
     
@@ -883,7 +883,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Pernol Blog">
     </span>
 
     
@@ -1039,7 +1039,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Pernol Blog">
     </span>
 
     
@@ -1181,7 +1181,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Pernol Blog">
     </span>
 
     
@@ -1323,7 +1323,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Pernol Blog">
     </span>
 
     
@@ -1529,7 +1529,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Pernol Blog">
     </span>
 
     
@@ -1700,7 +1700,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Pernol Blog">
     </span>
 
     

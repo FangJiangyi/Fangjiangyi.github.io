@@ -85,7 +85,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="Pernol Blog" type="application/atom+xml" />
 
 
 
@@ -101,7 +101,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="cppLearning">
 <meta property="og:url" content="http://example.com/2021/08/11/cppLearning/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Pernol Blog">
 <meta property="og:description" content="总说$0.1$0.0.0 环境搭建OS : Ubuntu 18.04LTS Post not found: timetable  $0.0.1 linux 命令初步（以下夹杂了许多个人理解后续会不断删改和补充） 命令与操作系统息息相关，对于linux有自己的文件系统也有相应的linux命令，对于微软有自己的windows操作系统，也有相应的DOS命令 linux 命令的结构如下： command">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2021/08/11/cppLearning/preprocess.JPG">
@@ -148,7 +148,7 @@
 
 
 
-  <title>cppLearning | Hexo</title>
+  <title>cppLearning | Pernol Blog</title>
   
 
 
@@ -188,7 +188,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">Pernol Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -294,7 +294,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Pernol Blog">
     </span>
 
     
@@ -399,19 +399,19 @@
 <p>根据如图所示的情况可以得到以下几点结论</p>
 <p>预处理的任务，将头文件宏定义等进行展开（可以考虑做一个预处理器）</p>
 <h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>g++ -S filename.cpp | filename.i<br>g++ -S filename.cpp | filename.i -o filename.s</p>
-<img src="/2021/08/11/cppLearning/compilation.JPG" class="">
+<img src="/2021/08/11/cppLearning/compilation.JPG" class>
 
 <p>编译的任务就是形成汇编码</p>
 <h3 id="汇编"><a href="#汇编" class="headerlink" title="汇编"></a>汇编</h3><p>g++ -c filename.cpp | filename.i | filename.s<br>g++ -c filename.cpp | filename.i | filename.s -o filename.o</p>
-<img src="/2021/08/11/cppLearning/assembly.JPG" class="">
+<img src="/2021/08/11/cppLearning/assembly.JPG" class>
 
 <p>形成机器码（在c++框架下应该称为目标文件.obj）其中一个源文件将对应一个目标文件</p>
 <h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>g++ filename.cpp | filename.i | filename.s | filename.o<br>g++ filename.cpp | filename.i | filename.s |filename.o -o filename.out</p>
 <p>将多个源文件汇编得到的目标文件整合成一个二进制文件（注意目标文件和链接后得到的文件均为二进制文件）加入内容包括必要的初始化，系统库及其他组件以及启动代码等（均为二进制形式）——有关链接的更多内容等我后续学习吧</p>
-<img src="/2021/08/11/cppLearning/linking.JPG" class="">
+<img src="/2021/08/11/cppLearning/linking.JPG" class>
 
 <h2 id="0-2IDE搭建"><a href="#0-2IDE搭建" class="headerlink" title="$0.2IDE搭建"></a>$0.2IDE搭建</h2><p>运用cmake,codelite轻量级IDE,vim进行编辑</p>
-<img src="/2021/08/11/cppLearning/tools.JPG" class="">
+<img src="/2021/08/11/cppLearning/tools.JPG" class>
 
 <h3 id="创建工作目录"><a href="#创建工作目录" class="headerlink" title="创建工作目录"></a>创建工作目录</h3><p>这里有几个命令顺便说一下:</p>
 <p>ls:列出当前目录下的内容</p>
