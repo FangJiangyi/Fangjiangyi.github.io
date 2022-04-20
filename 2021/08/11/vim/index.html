@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.js" integrity="sha384-GCPlQtWhtsjcfJYVuUlFZnpQgvoZ26GD/vvA4kG1PBaGBbtpq2cdvZjgj/mAMEY4" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="vim 作为linux下最强大的编辑器，我先行学习使用也是为了便于后续进一步进行编程。  Lesson 1 cursor move start vim from the shell prompt type delete the charactor at the cursor type To insert or append text type   Lesson 2 DELETION COMMAND">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vim">
+<meta property="og:url" content="http://example.com/2021/08/11/vim/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="vim 作为linux下最强大的编辑器，我先行学习使用也是为了便于后续进一步进行编程。  Lesson 1 cursor move start vim from the shell prompt type delete the charactor at the cursor type To insert or append text type   Lesson 2 DELETION COMMAND">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-08-11T06:54:25.000Z">
+<meta property="article:modified_time" content="2021-08-13T03:21:12.897Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2021/08/11/vim/"/>
+
+
+
+
+
+  <title>vim | Hexo</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/11/vim/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">vim</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-08-11T14:54:25+08:00">
+                2021-08-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/notebook-code-editor/" itemprop="url" rel="index">
+                    <span itemprop="name">notebook - code - editor</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>vim</strong> 作为linux下最强大的编辑器，我先行学习使用也是为了便于后续进一步进行编程。</p>
+<ul>
+<li><a href="#lesson-1">Lesson 1</a><ul>
+<li><a href="#cursor-move">cursor move</a></li>
+<li><a href="#start-vim-from-the-shell-prompt-type">start vim from the shell prompt type</a></li>
+<li><a href="#delete-the-charactor-at-the-cursor-type">delete the charactor at the cursor type</a></li>
+<li><a href="#to-insert-or-append-text-type">To insert or append text type</a></li>
+</ul>
+</li>
+<li><a href="#lesson-2">Lesson 2</a><ul>
+<li><a href="#deletion-commands">DELETION COMMANDS</a></li>
+<li><a href="#move-to-the-start">MOVE TO THE START</a></li>
+<li><a href="#undo-commands">UNDO COMMANDS</a></li>
+</ul>
+</li>
+<li><a href="#lesson-3">Lesson 3</a><ul>
+<li><a href="#the-put-command">THE PUT COMMAND</a></li>
+<li><a href="#the-replace-command">THE REPLACE COMMAND</a></li>
+<li><a href="#the-change-operator">THE CHANGE OPERATOR</a></li>
+</ul>
+</li>
+<li><a href="#lesson-4">Lesson 4</a><ul>
+<li><a href="#goto-command">GOTO COMMAND</a></li>
+<li><a href="#the-search-command">THE SEARCH COMMAND</a></li>
+<li><a href="#the-match-command">THE MATCH COMMAND</a></li>
+<li><a href="#thesubstitute-command">THE　SUBSTITUTE COMMAND</a></li>
+</ul>
+</li>
+<li><a href="#execute-an-external-command">EXECUTE AN EXTERNAL COMMAND</a><ul>
+<li><a href="#write-files">WRITE FILES</a></li>
+<li><a href="#more-on-write-files">MORE ON WRITE FILES</a></li>
+<li><a href="#retrieving-and-merging-files">RETRIEVING AND MERGING files</a></li>
+</ul>
+</li>
+<li><a href="#lesson-6">Lesson 6</a></li>
+<li><a href="#lesson-7">Lesson 7</a><ul>
+<li><a href="#completion">COMPLETION</a></li>
+</ul>
+</li>
+</ul>
+<p>模式分类</p>
+<ol>
+<li>command mode</li>
+<li>insert mode</li>
+</ol>
+<p>这种模式分类可以使我们利用键盘完成全部任务，不必分心去动鼠标。<br>有关模式切换，现下只了解两点：</p>
+<ul>
+<li>无论当前处于何种mode输入Esc总可以退回到command mode。</li>
+<li>press i enter insert mode</li>
+</ul>
+<h1 id="Lesson-1"><a href="#Lesson-1" class="headerlink" title="Lesson 1"></a>Lesson 1</h1><h2 id="cursor-move"><a href="#cursor-move" class="headerlink" title="cursor move"></a>cursor move</h2><p>h(left) &emsp; j(down) &emsp;   k(up) &emsp; l(right)</p>
+<h2 id="start-vim-from-the-shell-prompt-type"><a href="#start-vim-from-the-shell-prompt-type" class="headerlink" title="start vim from the shell prompt type"></a>start vim from the shell prompt type</h2><p>command: vim FILENAME &lt;ENTER&gt;</p>
+<h2 id="delete-the-charactor-at-the-cursor-type"><a href="#delete-the-charactor-at-the-cursor-type" class="headerlink" title="delete the charactor at the cursor type"></a>delete the charactor at the cursor type</h2><p>x</p>
+<h2 id="To-insert-or-append-text-type"><a href="#To-insert-or-append-text-type" class="headerlink" title="To insert or append text type"></a>To insert or append text type</h2><ul>
+<li>i &emsp; type inserted text:insert before the cursor</li>
+<li>A&emsp; type inserted text &lt;ESC&gt;: append after the line</li>
+</ul>
+<h1 id="Lesson-2"><a href="#Lesson-2" class="headerlink" title="Lesson 2"></a>Lesson 2</h1><h2 id="DELETION-COMMANDS"><a href="#DELETION-COMMANDS" class="headerlink" title="DELETION COMMANDS"></a>DELETION COMMANDS</h2><p>dw to delete a word when we are in the command mode.</p>
+<p>d$ to delete to the end of the linewhen we are in the command mode.</p>
+<p><strong>command grammar</strong><br>operator [count] motion</p>
+<p>[x] x means the element of the set of parameters that can be put onto that location.</p>
+<p>operator:</p>
+<p>Now we just learn d operator for delete.</p>
+<p>motion:</p>
+<ul>
+<li>w - until the start or the next word, EXCLUDING its first character.</li>
+<li>e - to the end of the current word, INCLUDING the last character.</li>
+<li>$ - to the end of line, INCLUDING the last character.<br>For example, d2w means delete 2 words from the cursor.</li>
+</ul>
+<h2 id="MOVE-TO-THE-START"><a href="#MOVE-TO-THE-START" class="headerlink" title="MOVE TO THE START"></a>MOVE TO THE START</h2><p>type 0</p>
+<h2 id="UNDO-COMMANDS"><a href="#UNDO-COMMANDS" class="headerlink" title="UNDO COMMANDS"></a>UNDO COMMANDS</h2><p>To undo previous actions, type: &emsp;&emsp;&emsp;u &emsp;(lowercase u)<br>To undo all the changes on a line, type: &emsp;&emsp;&emsp;U &emsp;(uppercase U)<br>To undo the undo’s, type: &emsp;&emsp;&emsp;CTRL-R</p>
+<h1 id="Lesson-3"><a href="#Lesson-3" class="headerlink" title="Lesson 3"></a>Lesson 3</h1><h2 id="THE-PUT-COMMAND"><a href="#THE-PUT-COMMAND" class="headerlink" title="THE PUT COMMAND"></a>THE PUT COMMAND</h2><p>function:Type p to put previously deleted text after the cursor.</p>
+<h2 id="THE-REPLACE-COMMAND"><a href="#THE-REPLACE-COMMAND" class="headerlink" title="THE REPLACE COMMAND"></a>THE REPLACE COMMAND</h2><p>function type rx to replace the character at the cursor with x.(under the condition that it is in the command mode)</p>
+<h2 id="THE-CHANGE-OPERATOR"><a href="#THE-CHANGE-OPERATOR" class="headerlink" title="THE CHANGE OPERATOR"></a>THE CHANGE OPERATOR</h2><p>grammar:<br>operator [number] motion<br>c$(from the line where cursor is placed)<br>c2e<br>…</p>
+<h1 id="Lesson-4"><a href="#Lesson-4" class="headerlink" title="Lesson 4"></a>Lesson 4</h1><h2 id="GOTO-COMMAND"><a href="#GOTO-COMMAND" class="headerlink" title="GOTO COMMAND"></a>GOTO COMMAND</h2><p>CTRL-G:show information about the current file and current line’s number.<br>G go to the last line of the file<br>gg go to the first line of the file<br>[number] G go to the numberth line of the file</p>
+<h2 id="THE-SEARCH-COMMAND"><a href="#THE-SEARCH-COMMAND" class="headerlink" title="THE SEARCH COMMAND"></a>THE SEARCH COMMAND</h2><p>type / followed by a  phrase to search for the phrase<br>n:next(in one direction)<br>N:Next(in the other direction)<br>?:search for a phrase in the backward direction.<br>CTRL-o go back to where you came from<br>CTRL-i goes forward</p>
+<h2 id="THE-MATCH-COMMAND"><a href="#THE-MATCH-COMMAND" class="headerlink" title="THE MATCH COMMAND"></a>THE MATCH COMMAND</h2><p>% is used to match ‘{}’,’[]’ and ‘()’</p>
+<h2 id="THE-SUBSTITUTE-COMMAND"><a href="#THE-SUBSTITUTE-COMMAND" class="headerlink" title="THE　SUBSTITUTE COMMAND"></a>THE　SUBSTITUTE COMMAND</h2><p>decide what function these commands below means:</p>
+<p>s/old/new(/g)<br>#,#s/old/new/g<br>%s/old/new/g<br>%s/old/new/gc</p>
+<h1 id="EXECUTE-AN-EXTERNAL-COMMAND"><a href="#EXECUTE-AN-EXTERNAL-COMMAND" class="headerlink" title="EXECUTE AN EXTERNAL COMMAND"></a>EXECUTE AN EXTERNAL COMMAND</h1><p>type :! followed by an external command to execute that command</p>
+<h2 id="WRITE-FILES"><a href="#WRITE-FILES" class="headerlink" title="WRITE FILES"></a>WRITE FILES</h2><p>:w FILENAME</p>
+<h2 id="MORE-ON-WRITE-FILES"><a href="#MORE-ON-WRITE-FILES" class="headerlink" title="MORE ON WRITE FILES"></a>MORE ON WRITE FILES</h2><p>v motion :w FILENAME</p>
+<h2 id="RETRIEVING-AND-MERGING-files"><a href="#RETRIEVING-AND-MERGING-files" class="headerlink" title="RETRIEVING AND MERGING files"></a>RETRIEVING AND MERGING files</h2><p>:r FILENAME: to insert the contents of a file——retrieves disk file FILENAME and puts it below the cursor position</p>
+<h1 id="Lesson-6"><a href="#Lesson-6" class="headerlink" title="Lesson 6"></a>Lesson 6</h1><ol>
+<li>Type o to open a line BELOW　the cursor and start Insert mode.</li>
+<li>Type O to open a line ABOVE the cursor.</li>
+<li>Type a to insert text AFTER the cursor.</li>
+<li>Type A to insert text after the end of the line.</li>
+<li>The y(for yank) operator yanks text, p puts (pastes) it.</li>
+<li>Typing a capital R enters Replace mode until &lt;ESC&gt; is pressed.</li>
+<li>Typing “:set xxx” sets the option “xxx”. Some options are:</li>
+</ol>
+<ul>
+<li>‘ic’ ‘ignorecase</li>
+<li>‘is’ ‘incsearch’</li>
+<li>‘hls’ ‘hlsearch’</li>
+</ul>
+<p>what are these three options means?</p>
+<h1 id="Lesson-7"><a href="#Lesson-7" class="headerlink" title="Lesson 7"></a>Lesson 7</h1><h2 id="COMPLETION"><a href="#COMPLETION" class="headerlink" title="COMPLETION"></a>COMPLETION</h2><p>CTRL-D and &lt;TAB&gt; 但是貌似只能在命令模式下补全。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/08/11/cppLearning/" rel="next" title="cppLearning">
+                <i class="fa fa-chevron-left"></i> cppLearning
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/08/13/mathcontest/" rel="prev" title="mathcontest">
+                mathcontest <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="" />
+          <p class="site-author-name" itemprop="name"></p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Lesson-1"><span class="nav-number">1.</span> <span class="nav-text">Lesson 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#cursor-move"><span class="nav-number">1.1.</span> <span class="nav-text">cursor move</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#start-vim-from-the-shell-prompt-type"><span class="nav-number">1.2.</span> <span class="nav-text">start vim from the shell prompt type</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#delete-the-charactor-at-the-cursor-type"><span class="nav-number">1.3.</span> <span class="nav-text">delete the charactor at the cursor type</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#To-insert-or-append-text-type"><span class="nav-number">1.4.</span> <span class="nav-text">To insert or append text type</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lesson-2"><span class="nav-number">2.</span> <span class="nav-text">Lesson 2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#DELETION-COMMANDS"><span class="nav-number">2.1.</span> <span class="nav-text">DELETION COMMANDS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MOVE-TO-THE-START"><span class="nav-number">2.2.</span> <span class="nav-text">MOVE TO THE START</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UNDO-COMMANDS"><span class="nav-number">2.3.</span> <span class="nav-text">UNDO COMMANDS</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lesson-3"><span class="nav-number">3.</span> <span class="nav-text">Lesson 3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#THE-PUT-COMMAND"><span class="nav-number">3.1.</span> <span class="nav-text">THE PUT COMMAND</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#THE-REPLACE-COMMAND"><span class="nav-number">3.2.</span> <span class="nav-text">THE REPLACE COMMAND</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#THE-CHANGE-OPERATOR"><span class="nav-number">3.3.</span> <span class="nav-text">THE CHANGE OPERATOR</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lesson-4"><span class="nav-number">4.</span> <span class="nav-text">Lesson 4</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#GOTO-COMMAND"><span class="nav-number">4.1.</span> <span class="nav-text">GOTO COMMAND</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#THE-SEARCH-COMMAND"><span class="nav-number">4.2.</span> <span class="nav-text">THE SEARCH COMMAND</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#THE-MATCH-COMMAND"><span class="nav-number">4.3.</span> <span class="nav-text">THE MATCH COMMAND</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#THE-SUBSTITUTE-COMMAND"><span class="nav-number">4.4.</span> <span class="nav-text">THE　SUBSTITUTE COMMAND</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#EXECUTE-AN-EXTERNAL-COMMAND"><span class="nav-number">5.</span> <span class="nav-text">EXECUTE AN EXTERNAL COMMAND</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#WRITE-FILES"><span class="nav-number">5.1.</span> <span class="nav-text">WRITE FILES</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MORE-ON-WRITE-FILES"><span class="nav-number">5.2.</span> <span class="nav-text">MORE ON WRITE FILES</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RETRIEVING-AND-MERGING-files"><span class="nav-number">5.3.</span> <span class="nav-text">RETRIEVING AND MERGING files</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lesson-6"><span class="nav-number">6.</span> <span class="nav-text">Lesson 6</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lesson-7"><span class="nav-number">7.</span> <span class="nav-text">Lesson 7</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#COMPLETION"><span class="nav-number">7.1.</span> <span class="nav-text">COMPLETION</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

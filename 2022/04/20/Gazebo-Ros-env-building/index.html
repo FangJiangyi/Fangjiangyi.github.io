@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.js" integrity="sha384-GCPlQtWhtsjcfJYVuUlFZnpQgvoZ26GD/vvA4kG1PBaGBbtpq2cdvZjgj/mAMEY4" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="Ros+Gazebo环境搭建$ 1.0 虚拟机安装虽说貌似可以安装双系统，但是本人非常害怕硬盘被搞烂，因此还是安装虚拟机的为妙，我采用的是VMWare pro 15 + Ubuntu 18.04.5 LTS（虚拟机安装步骤网上一大堆，如果不会可以直接看别人博客）然后我这本质上是官网教程翻译+踩的小坑总结，如果没兴趣看我可以直接官网  垃圾问题解决方案 $ 1.1 换源换成国内的源 中国科学技术大学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gazebo-Ros-env-building">
+<meta property="og:url" content="http://example.com/2022/04/20/Gazebo-Ros-env-building/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Ros+Gazebo环境搭建$ 1.0 虚拟机安装虽说貌似可以安装双系统，但是本人非常害怕硬盘被搞烂，因此还是安装虚拟机的为妙，我采用的是VMWare pro 15 + Ubuntu 18.04.5 LTS（虚拟机安装步骤网上一大堆，如果不会可以直接看别人博客）然后我这本质上是官网教程翻译+踩的小坑总结，如果没兴趣看我可以直接官网  垃圾问题解决方案 $ 1.1 换源换成国内的源 中国科学技术大学">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022-04-20-Gazebo-Ros-env-building/rosdep_error.png">
+<meta property="og:image" content="http://example.com/2022-04-20-Gazebo-Ros-env-building/rosdep_error2.png">
+<meta property="og:image" content="http://example.com/2022-04-20-Gazebo-Ros-env-building/rosdep_error3.png">
+<meta property="article:published_time" content="2022-04-20T07:55:37.000Z">
+<meta property="article:modified_time" content="2022-04-20T08:03:37.148Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022-04-20-Gazebo-Ros-env-building/rosdep_error.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2022/04/20/Gazebo-Ros-env-building/"/>
+
+
+
+
+
+  <title>Gazebo-Ros-env-building | Hexo</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/20/Gazebo-Ros-env-building/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Gazebo-Ros-env-building</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-04-20T15:55:37+08:00">
+                2022-04-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Ros-Gazebo环境搭建"><a href="#Ros-Gazebo环境搭建" class="headerlink" title="Ros+Gazebo环境搭建"></a>Ros+Gazebo环境搭建</h1><h2 id="1-0-虚拟机安装"><a href="#1-0-虚拟机安装" class="headerlink" title="$ 1.0 虚拟机安装"></a>$ 1.0 虚拟机安装</h2><p>虽说貌似可以安装双系统，但是本人非常害怕硬盘被搞烂，因此还是安装虚拟机的为妙，我采用的是VMWare pro 15 + Ubuntu 18.04.5 LTS（虚拟机安装步骤网上一大堆，如果不会可以直接看别人博客）然后我这本质上是官网教程翻译+踩的小坑总结，如果没兴趣看我可以直接<a target="_blank" rel="noopener" href="http://wiki.ros.org/melodic/Installation/Ubuntu">官网</a>  <a target="_blank" rel="noopener" href="https://blog.csdn.net/leida_wt/article/details/115120940?utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-4.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-4.nonecas">垃圾问题解决方案</a></p>
+<h2 id="1-1-换源"><a href="#1-1-换源" class="headerlink" title="$ 1.1 换源"></a>$ 1.1 换源</h2><p>换成国内的源</p>
+<p>中国科学技术大学</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh -c &#x27;. /etc/lsb-release &amp;&amp; echo &quot;deb http://mirrors.ustc.edu.cn/ros/ubuntu/ `lsb_release -cs` main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>清华大学</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh -c &#x27;. /etc/lsb-release &amp;&amp; echo &quot;deb http://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ `lsb_release -cs` main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#x27;</span><br></pre></td></tr></table></figure>
+<p>北京外国语大学</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh -c &#x27;. /etc/lsb-release &amp;&amp; echo &quot;deb http://mirrors.bfsu.edu.cn/ros/ubuntu/ `lsb_release -cs` main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#x27;</span><br></pre></td></tr></table></figure>
+<p>上海交通大学</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh -c &#x27;. /etc/lsb-release &amp;&amp; echo &quot;deb http://mirrors.sjtug.sjtu.edu.cn/ros/ubuntu/ `lsb_release -cs` main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#x27;</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-2-设置密钥"><a href="#1-2-设置密钥" class="headerlink" title="$ 1.2 设置密钥"></a>$ 1.2 设置密钥</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install curl # 如果你没有安装curl</span><br><span class="line">curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-3-安装"><a href="#1-3-安装" class="headerlink" title="$ 1.3 安装"></a>$ 1.3 安装</h2><p>首先，确定apt最新</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
+<p>无脑桌面全安装（东西比较全）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install ros-melodic-desktop-full</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-4-环境设置"><a href="#1-4-环境设置" class="headerlink" title="$ 1.4 环境设置"></a>$ 1.4 环境设置</h2><p>添加环境变量到每个新的bash（比较方便，可以直接在脚本中运行ros相关的命令）</p>
+<h2 id="1-5-编译包依赖"><a href="#1-5-编译包依赖" class="headerlink" title="$ 1.5 编译包依赖"></a>$ 1.5 编译包依赖</h2><p>恭喜你到目前为止，你已经完成了所有运行ROS内核所需的包，为了创建和管理您自己的ROS 工作空间，有各种各样的分布式的工具和要求。举例来说，rosinstall是一个常用的使你很容易下载许多ROS 包的源代码树（有待后续学习何为源代码树）的命令行工具（解读：也就是说，如果你不想后续安装各种开源的包等等内容的话，到现在为止，你的ROS也可以正常使用了）</p>
+<p>为了安装这个工具和其他编译ROS包的依赖，执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential</span><br></pre></td></tr></table></figure>
+
+<p>下面安装rosdep（罪魁祸首）这个我傻逼了很长时间，官方给出的方法很简单：<br>先</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install python-rosdep</span><br></pre></td></tr></table></figure>
+<p>然后</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rosdep init</span><br><span class="line">rosdep update</span><br></pre></td></tr></table></figure>
+<p>这个rosdep update命令经常报超时的错如：<br><img src="/2022-04-20-Gazebo-Ros-env-building/rosdep_error.png" alt="rosdep超时"><br>我们不妨打开看看这个/etc/ros/rosdep/sources.list.d 到底是个他妈何方神圣。</p>
+<p>进入管理员模式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br></pre></td></tr></table></figure>
+<p>进入到该目录下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/ros/rosdep/sources.list.d</span><br></pre></td></tr></table></figure>
+<p>ls一下看看都有啥傻逼东西<br><img src="/2022-04-20-Gazebo-Ros-env-building/rosdep_error2.png" alt="sources.list.d"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gedit 20-default.list</span><br></pre></td></tr></table></figure>
+<p><img src="/2022-04-20-Gazebo-Ros-env-building/rosdep_error3.png" alt="20-default.list"><br>我们分析一下这个文件，给出了个https的网址，然后如果我们访问这个网址，发现这个raw.githubxxx的东西在不科学上网的前提下非常容易超时，所以大概可以猜测到，就是我们需要访问这个网站去获取一些安装信息，但这个网站和github相关，所以。。。</p>
+<h2 id="1-6-傻逼问题的解决方法"><a href="#1-6-傻逼问题的解决方法" class="headerlink" title="$ 1.6 傻逼问题的解决方法"></a>$ 1.6 傻逼问题的解决方法</h2><p>一劳永逸的解决方法是科学上网，然而我暂时并不想这样，我之前用过类似的解决方法是把它在线访问的东西下载到本地，然后改python脚本直接离线安装。不过这次发现了更加快速的方法：<a target="_blank" rel="noopener" href="https://ghproxy.com/%E4%BB%A3%E7%90%86%E5%8A%A0%E9%80%9F%E3%80%82">https://ghproxy.com/代理加速。</a><br>把所有需要访问raw.githubxxx的脚本代码前面都加一个这个<a target="_blank" rel="noopener" href="https://ghproxy.com/%E6%B1%87%E6%80%BB%E4%B8%80%E4%B8%8B%E6%80%BB%E5%85%B1%E6%9C%89%EF%BC%9A">https://ghproxy.com/汇总一下总共有：</a></p>
+<p>进入该源文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/lib/python2.7/dist-packages/rosdep2/sources_list.py</span><br></pre></td></tr></table></figure>
+<p>找到 download_rosdep_data(url)函数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url=&quot;https://ghproxy.com/&quot;+url #try...下面加一行 </span><br></pre></td></tr></table></figure>
+<p>进入该源文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/lib/python2.7/dist-packages/rosdistro/__init__.py</span><br></pre></td></tr></table></figure>
+<p>找到 DEFAULT_INDEX_URL</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DEFAULT_INDEX_URL = &#x27;https://ghproxy.com/https://raw.githubusercontent.com/ros/rosdistro/master/index-v4.yaml&#x27;</span><br></pre></td></tr></table></figure>
+<p>继续替换，下面仅给出目录，做相似替换即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/usr/lib/python2.7/dist-packages/rosdep2/gbpdistro_support.py 36行</span><br><span class="line">/usr/lib/python2.7/dist-packages/rosdep2/sources_list.py 72行</span><br><span class="line">/usr/lib/python2.7/dist-packages/rosdep2/rep3.py	39行</span><br><span class="line">/usr/lib/python2.7/dist-packages/rosdistro/manifest_provider/github.py 68行 119行</span><br><span class="line">/usr/lib/python2.7/dist-packages/rosdep2/gbpdistro_support.py 204行添加gbpdistro_url = &quot;https://ghproxy.com/&quot; + gbpdistro_url</span><br></pre></td></tr></table></figure>
+<p>然后尝试重新执行 rosdep update 完美解决</p>
+<h2 id="2-0-Gazebo-安装"><a href="#2-0-Gazebo-安装" class="headerlink" title="$ 2.0 Gazebo 安装"></a>$ 2.0 Gazebo 安装</h2>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/09/13/sensor/" rel="next" title="sensor">
+                <i class="fa fa-chevron-left"></i> sensor
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="" />
+          <p class="site-author-name" itemprop="name"></p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ros-Gazebo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-number">1.</span> <span class="nav-text">Ros+Gazebo环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-0-%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.</span> <span class="nav-text">$ 1.0 虚拟机安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E6%8D%A2%E6%BA%90"><span class="nav-number">1.2.</span> <span class="nav-text">$ 1.1 换源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E8%AE%BE%E7%BD%AE%E5%AF%86%E9%92%A5"><span class="nav-number">1.3.</span> <span class="nav-text">$ 1.2 设置密钥</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E5%AE%89%E8%A3%85"><span class="nav-number">1.4.</span> <span class="nav-text">$ 1.3 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E7%8E%AF%E5%A2%83%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.5.</span> <span class="nav-text">$ 1.4 环境设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-%E7%BC%96%E8%AF%91%E5%8C%85%E4%BE%9D%E8%B5%96"><span class="nav-number">1.6.</span> <span class="nav-text">$ 1.5 编译包依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-%E5%82%BB%E9%80%BC%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="nav-number">1.7.</span> <span class="nav-text">$ 1.6 傻逼问题的解决方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-0-Gazebo-%E5%AE%89%E8%A3%85"><span class="nav-number">1.8.</span> <span class="nav-text">$ 2.0 Gazebo 安装</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,2209 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.js" integrity="sha384-GCPlQtWhtsjcfJYVuUlFZnpQgvoZ26GD/vvA4kG1PBaGBbtpq2cdvZjgj/mAMEY4" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/"/>
+
+
+
+
+
+  <title>Hexo</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/20/Gazebo-Ros-env-building/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/04/20/Gazebo-Ros-env-building/" itemprop="url">Gazebo-Ros-env-building</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-04-20T15:55:37+08:00">
+                2022-04-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Ros-Gazebo环境搭建"><a href="#Ros-Gazebo环境搭建" class="headerlink" title="Ros+Gazebo环境搭建"></a>Ros+Gazebo环境搭建</h1><h2 id="1-0-虚拟机安装"><a href="#1-0-虚拟机安装" class="headerlink" title="$ 1.0 虚拟机安装"></a>$ 1.0 虚拟机安装</h2><p>虽说貌似可以安装双系统，但是本人非常害怕硬盘被搞烂，因此还是安装虚拟机的为妙，我采用的是VMWare pro 15 + Ubuntu 18.04.5 LTS（虚拟机安装步骤网上一大堆，如果不会可以直接看别人博客）然后我这本质上是官网教程翻译+踩的小坑总结，如果没兴趣看我可以直接<a target="_blank" rel="noopener" href="http://wiki.ros.org/melodic/Installation/Ubuntu">官网</a>  <a target="_blank" rel="noopener" href="https://blog.csdn.net/leida_wt/article/details/115120940?utm_medium=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-4.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-2~default~BlogCommendFromBaidu~default-4.nonecas">垃圾问题解决方案</a></p>
+<h2 id="1-1-换源"><a href="#1-1-换源" class="headerlink" title="$ 1.1 换源"></a>$ 1.1 换源</h2><p>换成国内的源</p>
+<p>中国科学技术大学</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh -c &#x27;. /etc/lsb-release &amp;&amp; echo &quot;deb http://mirrors.ustc.edu.cn/ros/ubuntu/ `lsb_release -cs` main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>清华大学</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh -c &#x27;. /etc/lsb-release &amp;&amp; echo &quot;deb http://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ `lsb_release -cs` main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#x27;</span><br></pre></td></tr></table></figure>
+<p>北京外国语大学</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh -c &#x27;. /etc/lsb-release &amp;&amp; echo &quot;deb http://mirrors.bfsu.edu.cn/ros/ubuntu/ `lsb_release -cs` main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#x27;</span><br></pre></td></tr></table></figure>
+<p>上海交通大学</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh -c &#x27;. /etc/lsb-release &amp;&amp; echo &quot;deb http://mirrors.sjtug.sjtu.edu.cn/ros/ubuntu/ `lsb_release -cs` main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#x27;</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-2-设置密钥"><a href="#1-2-设置密钥" class="headerlink" title="$ 1.2 设置密钥"></a>$ 1.2 设置密钥</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install curl # 如果你没有安装curl</span><br><span class="line">curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-3-安装"><a href="#1-3-安装" class="headerlink" title="$ 1.3 安装"></a>$ 1.3 安装</h2><p>首先，确定apt最新</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
+<p>无脑桌面全安装（东西比较全）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install ros-melodic-desktop-full</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-4-环境设置"><a href="#1-4-环境设置" class="headerlink" title="$ 1.4 环境设置"></a>$ 1.4 环境设置</h2><p>添加环境变量到每个新的bash（比较方便，可以直接在脚本中运行ros相关的命令）</p>
+<h2 id="1-5-编译包依赖"><a href="#1-5-编译包依赖" class="headerlink" title="$ 1.5 编译包依赖"></a>$ 1.5 编译包依赖</h2><p>恭喜你到目前为止，你已经完成了所有运行ROS内核所需的包，为了创建和管理您自己的ROS 工作空间，有各种各样的分布式的工具和要求。举例来说，rosinstall是一个常用的使你很容易下载许多ROS 包的源代码树（有待后续学习何为源代码树）的命令行工具（解读：也就是说，如果你不想后续安装各种开源的包等等内容的话，到现在为止，你的ROS也可以正常使用了）</p>
+<p>为了安装这个工具和其他编译ROS包的依赖，执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential</span><br></pre></td></tr></table></figure>
+
+<p>下面安装rosdep（罪魁祸首）这个我傻逼了很长时间，官方给出的方法很简单：<br>先</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install python-rosdep</span><br></pre></td></tr></table></figure>
+<p>然后</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rosdep init</span><br><span class="line">rosdep update</span><br></pre></td></tr></table></figure>
+<p>这个rosdep update命令经常报超时的错如：<br><img src="/2022-04-20-Gazebo-Ros-env-building/rosdep_error.png" alt="rosdep超时"><br>我们不妨打开看看这个/etc/ros/rosdep/sources.list.d 到底是个他妈何方神圣。</p>
+<p>进入管理员模式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br></pre></td></tr></table></figure>
+<p>进入到该目录下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/ros/rosdep/sources.list.d</span><br></pre></td></tr></table></figure>
+<p>ls一下看看都有啥傻逼东西<br><img src="/2022-04-20-Gazebo-Ros-env-building/rosdep_error2.png" alt="sources.list.d"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gedit 20-default.list</span><br></pre></td></tr></table></figure>
+<p><img src="/2022-04-20-Gazebo-Ros-env-building/rosdep_error3.png" alt="20-default.list"><br>我们分析一下这个文件，给出了个https的网址，然后如果我们访问这个网址，发现这个raw.githubxxx的东西在不科学上网的前提下非常容易超时，所以大概可以猜测到，就是我们需要访问这个网站去获取一些安装信息，但这个网站和github相关，所以。。。</p>
+<h2 id="1-6-傻逼问题的解决方法"><a href="#1-6-傻逼问题的解决方法" class="headerlink" title="$ 1.6 傻逼问题的解决方法"></a>$ 1.6 傻逼问题的解决方法</h2><p>一劳永逸的解决方法是科学上网，然而我暂时并不想这样，我之前用过类似的解决方法是把它在线访问的东西下载到本地，然后改python脚本直接离线安装。不过这次发现了更加快速的方法：<a target="_blank" rel="noopener" href="https://ghproxy.com/%E4%BB%A3%E7%90%86%E5%8A%A0%E9%80%9F%E3%80%82">https://ghproxy.com/代理加速。</a><br>把所有需要访问raw.githubxxx的脚本代码前面都加一个这个<a target="_blank" rel="noopener" href="https://ghproxy.com/%E6%B1%87%E6%80%BB%E4%B8%80%E4%B8%8B%E6%80%BB%E5%85%B1%E6%9C%89%EF%BC%9A">https://ghproxy.com/汇总一下总共有：</a></p>
+<p>进入该源文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/lib/python2.7/dist-packages/rosdep2/sources_list.py</span><br></pre></td></tr></table></figure>
+<p>找到 download_rosdep_data(url)函数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url=&quot;https://ghproxy.com/&quot;+url #try...下面加一行 </span><br></pre></td></tr></table></figure>
+<p>进入该源文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/lib/python2.7/dist-packages/rosdistro/__init__.py</span><br></pre></td></tr></table></figure>
+<p>找到 DEFAULT_INDEX_URL</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DEFAULT_INDEX_URL = &#x27;https://ghproxy.com/https://raw.githubusercontent.com/ros/rosdistro/master/index-v4.yaml&#x27;</span><br></pre></td></tr></table></figure>
+<p>继续替换，下面仅给出目录，做相似替换即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/usr/lib/python2.7/dist-packages/rosdep2/gbpdistro_support.py 36行</span><br><span class="line">/usr/lib/python2.7/dist-packages/rosdep2/sources_list.py 72行</span><br><span class="line">/usr/lib/python2.7/dist-packages/rosdep2/rep3.py	39行</span><br><span class="line">/usr/lib/python2.7/dist-packages/rosdistro/manifest_provider/github.py 68行 119行</span><br><span class="line">/usr/lib/python2.7/dist-packages/rosdep2/gbpdistro_support.py 204行添加gbpdistro_url = &quot;https://ghproxy.com/&quot; + gbpdistro_url</span><br></pre></td></tr></table></figure>
+<p>然后尝试重新执行 rosdep update 完美解决</p>
+<h2 id="2-0-Gazebo-安装"><a href="#2-0-Gazebo-安装" class="headerlink" title="$ 2.0 Gazebo 安装"></a>$ 2.0 Gazebo 安装</h2>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/13/sensor/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/09/13/sensor/" itemprop="url">sensor</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-09-13T12:36:26+08:00">
+                2021-09-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li><a href="#%E4%BC%A0%E6%84%9F%E5%99%A8">传感器</a><ul>
+<li><a href="#%E7%BB%AA%E8%AE%BA">绪论</a><ul>
+<li><a href="#%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%AE%9A%E4%B9%89">传感器的定义</a></li>
+<li><a href="#%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%8F%91%E5%B1%95%E8%B6%8B%E5%90%91">传感器的发展趋向</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E4%B8%80%E8%88%AC%E7%89%B9%E6%80%A7">传感器的一般特性</a><ul>
+<li><a href="#%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E9%9D%99%E6%80%81%E7%89%B9%E6%80%A7">传感器的静态特性</a><ul>
+<li><a href="#%E9%9D%99%E6%80%81%E6%A0%A1%E5%87%86%E6%9B%B2%E7%BA%BF">静态校准曲线</a></li>
+<li><a href="#%E6%8B%9F%E5%90%88%E7%9B%B4%E7%BA%BF%E7%9A%84%E6%B1%82%E8%A7%A3">拟合直线的求解</a></li>
+<li><a href="#%E7%BA%BF%E6%80%A7%E5%BA%A6%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%AF%AF%E5%B7%AE">线性度（非线性误差）</a><ul>
+<li><a href="#%E5%AE%9A%E4%B9%89">定义</a></li>
+<li><a href="#%E6%80%A7%E8%B4%A8">性质</a></li>
+<li><a href="#remark">Remark</a></li>
+</ul>
+</li>
+<li><a href="#%E8%BF%9F%E6%BB%9E">迟滞</a></li>
+<li><a href="#%E9%87%8D%E5%A4%8D%E6%80%A7">重复性</a></li>
+<li><a href="#%E5%87%86%E7%A1%AE%E5%BA%A6">准确度</a></li>
+<li><a href="#%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E7%B2%BE%E5%BA%A6%E7%AD%89%E7%BA%A7">传感器的精度等级</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BC%A0%E6%84%9F%E5%99%A8%E7%9A%84%E5%8A%A8%E6%80%81%E7%89%B9%E6%80%A7">传感器的动态特性</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BC%A0%E6%84%9F%E5%99%A8%E6%80%A7%E8%83%BD%E4%B8%8E%E7%BB%93%E6%9E%84%E7%9A%84%E5%85%B3%E7%B3%BB">传感器性能与结构的关系</a><ul>
+<li><a href="#%E7%9B%B4%E6%8E%A5%E5%8F%98%E6%8D%A2%E5%9E%8B">直接变换型</a></li>
+<li><a href="#%E5%B7%AE%E5%8A%A8%E5%9E%8B">差动型</a></li>
+<li><a href="#%E5%B9%B3%E8%A1%A1%E5%9E%8B">平衡型</a></li>
+<li><a href="#%E5%86%97%E4%BD%99%E5%9E%8B">冗余型</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="传感器"><a href="#传感器" class="headerlink" title="传感器"></a>传感器</h1><h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><h3 id="传感器的定义"><a href="#传感器的定义" class="headerlink" title="传感器的定义"></a>传感器的定义</h3><p>传感器是将各种非电量（包括物理量、化学量、生物量等）按<strong>一定规律</strong>转换成便于处理和传输的另一种物理量（一般为电量）的装置</p>
+<h3 id="传感器的发展趋向"><a href="#传感器的发展趋向" class="headerlink" title="传感器的发展趋向"></a>传感器的发展趋向</h3><p>三“新”</p>
+<ol>
+<li>新材料的开发应用</li>
+<li>新工艺技术的应用</li>
+<li>新效应的发现</li>
+</ol>
+<p>Remark:<br>新材料意味着本质上的区别（能够实现数量级上的突破）？<br>新工艺技术代表着成本降低、性能优越<br>新效应的发现——光电效应的发现引领了光电传感器的发明，同样，新的效应，可以构建不同物理量之间的关系，其中新的传感器就可能利用这样的关系。<br>五“化”</p>
+<ol>
+<li>固态化</li>
+<li>集成化和多功能化</li>
+<li>图像化</li>
+<li>智能化</li>
+<li>网络化</li>
+</ol>
+<p>固态化<br>集成化——提高稳定性（分立元件和集成元件的对比）自带输出处理以及可视化模块等<br>多功能化——类似于软件，我们希望我们做的是通用编程和通用算法可扩展性强<br>图像化——可视化问题是永久的且是重要的<br>智能化——能够针对不同情况做出一些不同的调整（但基本仅限于有限状态机，并不能说具备了智能）<br>网络化——响应实时数据，上传云端</p>
+<h2 id="传感器的一般特性"><a href="#传感器的一般特性" class="headerlink" title="传感器的一般特性"></a>传感器的一般特性</h2><h3 id="传感器的静态特性"><a href="#传感器的静态特性" class="headerlink" title="传感器的静态特性"></a>传感器的静态特性</h3><h4 id="静态校准曲线"><a href="#静态校准曲线" class="headerlink" title="静态校准曲线"></a>静态校准曲线</h4><p>在标准工作状态下，利用一定<strong>精度等级</strong>的校准设备，对传感器进行往复循环测试，即可得到输出-输入数据。将这些数据列成表格，再画出各被测量值（正行程和反行程）对应输出平均值的连线，即为传感器的静态校准曲线。</p>
+<h4 id="拟合直线的求解"><a href="#拟合直线的求解" class="headerlink" title="拟合直线的求解"></a>拟合直线的求解</h4><ol>
+<li>过零拟合</li>
+<li>过零旋转拟合</li>
+<li>端点连线拟合</li>
+<li>端点平移拟合</li>
+<li>最小二乘法</li>
+</ol>
+<p>其中端点连线拟合又称为端基法，实现方法：<br>把传感器校准数据的零点输出平均值$a _{0}$和满量程输出的平均值 $b _{0} $连成的直线 $a _{0}b _{0} $作为传感器特性的拟合直线。</p>
+<h4 id="线性度（非线性误差）"><a href="#线性度（非线性误差）" class="headerlink" title="线性度（非线性误差）"></a>线性度（非线性误差）</h4><h5 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h5><p>在规定条件下，传感器校准曲线与拟合直线间最大偏差与满量程输出值的百分比称为线性度</p>
+<h5 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h5><p>非线性误差是以一定的拟合直线或理想直线为基准直线算出来的——基准直线不同，所得线性度也不同</p>
+<h5 id="Remark"><a href="#Remark" class="headerlink" title="Remark"></a>Remark</h5><p>谈论线性度和非线性误差时，必须同时说明所依据的基准直线。不能笼统而谈。</p>
+<h4 id="迟滞"><a href="#迟滞" class="headerlink" title="迟滞"></a>迟滞</h4><h4 id="重复性"><a href="#重复性" class="headerlink" title="重复性"></a>重复性</h4><h4 id="准确度"><a href="#准确度" class="headerlink" title="准确度"></a>准确度</h4><h4 id="传感器的精度等级"><a href="#传感器的精度等级" class="headerlink" title="传感器的精度等级"></a>传感器的精度等级</h4><h3 id="传感器的动态特性"><a href="#传感器的动态特性" class="headerlink" title="传感器的动态特性"></a>传感器的动态特性</h3><h2 id="传感器性能与结构的关系"><a href="#传感器性能与结构的关系" class="headerlink" title="传感器性能与结构的关系"></a>传感器性能与结构的关系</h2><h3 id="直接变换型"><a href="#直接变换型" class="headerlink" title="直接变换型"></a>直接变换型</h3><h3 id="差动型"><a href="#差动型" class="headerlink" title="差动型"></a>差动型</h3><h3 id="平衡型"><a href="#平衡型" class="headerlink" title="平衡型"></a>平衡型</h3><h3 id="冗余型"><a href="#冗余型" class="headerlink" title="冗余型"></a>冗余型</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/07/emotorandedrive/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/09/07/emotorandedrive/" itemprop="url">emotorandedrive</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-09-07T20:58:15+08:00">
+                2021-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Motor"><a href="#Motor" class="headerlink" title="Motor"></a>Motor</h2><h3 id="DC-Motor"><a href="#DC-Motor" class="headerlink" title="DC Motor"></a>DC Motor</h3><h4 id="Two-Principles"><a href="#Two-Principles" class="headerlink" title="Two Principles"></a>Two Principles</h4><p>法拉第电磁感应定律</p>
+<p>安培定律</p>
+<p>如果将通电的线圈当作一个小的磁铁，那么我们会发现当定子与转子异极相对时是一个稳定平衡状态这是我们所不希望的。因此，我需要寻找一个稳定平衡的状态</p>
+<p>电枢电阻<br>接线（一串到底）：<br>1-1’-2-2’-3-3’-4-4’-5-5’-6-6’-1（必须是循环链接结构为了保证电机的旋转对称性）<br>把正极和1(6’)连接，然后负极和3’(4)连接。（串联）<br>回路1：1-1’-2-2’-3-3’<br>回路2：6’-6-5’-5-4’-4</p>
+<p>所有入电流的永远在N半区，所有出电流的永远在S半区</p>
+<p>单枢电阻存在的问题：转矩小、波动大、有0转矩点（存在位置动力不足）。</p>
+<p>想法1：<br>我们可以想到，当增加更多圈电枢框时，即使有些电枢框处在零转矩位置，但由于随着通电电枢框数量的增加，可以认为处在零转矩位置的电枢提供的力矩越来越微不足道，此时可认为电动机提供的转矩越来越平稳。</p>
+<p>想法2：<br>观察力矩随空间分布的曲线，对于增加电枢个数的操作可以认为是同一电枢曲线经过位移（处在不同位置）的曲线的叠加，叠加过后我们会发现，两者没有零转矩点而且下降的幅度变小。</p>
+<p>想法3：<br>可以认为不同位置的电枢电阻贡献的转矩是一个曲线上的不同的点，这些电阻贡献转矩的累加可以被认为是积分过程（差了倍数），积分使得取值更加平均，可以减缓变化过快的地方（起到低通滤波的作用）</p>
+<h3 id="3-Phase-AC-Induction-Motor"><a href="#3-Phase-AC-Induction-Motor" class="headerlink" title="3 Phase AC Induction Motor"></a>3 Phase AC Induction Motor</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/19/linear-algebra/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/08/19/linear-algebra/" itemprop="url">linear_algebra</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-08-19T07:46:52+08:00">
+                2021-08-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/17/calculus/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/08/17/calculus/" itemprop="url">calculus</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-08-17T15:56:05+08:00">
+                2021-08-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/notebook-subject-math-calculus/" itemprop="url" rel="index">
+                    <span itemprop="name">notebook -subject -math -calculus</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="微积分学"><a href="#微积分学" class="headerlink" title="微积分学"></a>微积分学</h1><h2 id="极限和连续"><a href="#极限和连续" class="headerlink" title="极限和连续"></a>极限和连续</h2><h2 id="导数与偏导数"><a href="#导数与偏导数" class="headerlink" title="导数与偏导数"></a>导数与偏导数</h2><h3 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h3><p>导数定义：$f’(x_0)=\lim \limits_{\Delta x\rightarrow0}\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}$</p>
+<p>高阶导数采用递归定义：$f ^{(n)}(x)=\lim \limits_{\Delta x \to 0}\frac{f^{(n-1)}\ \ (x_{0}+ \Delta x)-f^{(n-1)}\ \ (x_{0})}{\Delta x}$</p>
+<h4 id="积法则证明"><a href="#积法则证明" class="headerlink" title="积法则证明"></a>积法则证明</h4><p>\begin{align}<br>\lim\limits_{\Delta x \to 0}\frac{u(x_{0}+\Delta x)v(x_{0}+\Delta x)-u(x_{0})v(x_{0})}{\Delta x} &amp;= \lim\limits_{\Delta x \to 0}\frac{u(x_{0}+\Delta x)v(x_{0}+\Delta x)-u(x_{0}+\Delta x)v(x_{0})+u(x_{0}+\Delta x)v(x_{0})-u(x_{0})v(x_{0})}{\Delta x}\\<br> &amp;= \lim\limits_{\Delta x \to 0}\frac{u(x_{0}+\Delta x)v(x_{0}+\Delta x)-u(x_{0}+\Delta x)v(x_0)}{\Delta x}+\lim\limits_{\Delta x\to 0}\frac{u(x_{0}+\Delta x)v(x_{0})-u(x_{0})v(x_{0})}{\Delta x}\\<br> &amp;= u(x_{0})v’(x_{0})+u’(x_{0})v(x_{0})<br>\end{align}</p>
+<h4 id="商法则证明"><a href="#商法则证明" class="headerlink" title="商法则证明"></a>商法则证明</h4><p>\begin{align}<br>\lim\limits_{\Delta x \to 0} \frac{\frac{u (x_{0}+\Delta x)}{v(x_{0}+\Delta x)}-\frac{u (x_{0})}{v(x_{0})}}{\Delta x}&amp;=\lim\limits_{\Delta x \to 0}\frac{u(x_{0}+\Delta x)v(x_{0})-v(x_{0}+\Delta x)u (x_{0})}{\Delta x v(x_{0}+\Delta x)v (x_{0})}\\<br>&amp;= \lim\limits_{\Delta x \to 0}\frac{u(x_{0}+\Delta x)v(x_{0})-u(x_{0})v (x_{0})}{\Delta x v(x_{0}+\Delta x)v (x_{0})}+\lim\limits_{\Delta x \to 0}\frac{u (x_{0})v(x_{0})-u (x_{0})v(x_{0}+\Delta x)}{\Delta xv (x _{0}+\Delta x)v(x_{0})}\\<br>(\frac{u(x)}{v (x)})’\bigg|_{x=x_{0}}&amp;= \frac{u’(x_{0})v (x_{0})-u (x_{0})v’(x_{0})}{v_{0}^2}<br>\end{align}</p>
+<h4 id="复合函数求导法则证明"><a href="#复合函数求导法则证明" class="headerlink" title="复合函数求导法则证明"></a>复合函数求导法则证明</h4><p>\begin{align}<br>\lim\limits_{\Delta x \to 0}\frac{f (g (x_{0}+\Delta x))-f (g (x_{0}))}{\Delta x} &amp;=\lim\limits _{\Delta x \to 0}\frac{f (g (x _{0}+\Delta x))-f (g (x _{0}))}{g (x _{0}+\Delta x)-g (x _{0})}\lim\limits _{\Delta x \to 0}\frac{g (x _{0}+\Delta x)-g (x _{0})}{\Delta x} \\<br>&amp;=\lim\limits _{\Delta x \to 0}f’(g (x _{0}))g’(x _{0})<br>\end{align}</p>
+<h4 id="小结1"><a href="#小结1" class="headerlink" title="小结1"></a>小结1</h4><p>以上的证明仅仅要求$f,g,在x_{0}处可导对于复合函数求导法则（f在g(x_{0})处可导）$从这当中回应我们的导数运算法则是不依赖于导函数的存在性的。也就是f,g在某一点的可导性，g在该点的非零性等可以推出以上运算后的函数在某点的导数的存在性以及其计算公式。同样从复合函数求导公式可以了解到：$f’和f$是一对对应关系（函数和其导函数可建立对应关系）只要f确定（不管以哪一种形式确定（只要符合函数的定义）——这里引申是f形式存在可以不依赖于自变量）则其导函数f’就确定了。因此f’(2x)是对于f’这一函数代入2x计算。<br>达布定理<br>单侧导数极限存在定理<br>达布定理推论</p>
+<h3 id="偏导数"><a href="#偏导数" class="headerlink" title="偏导数"></a>偏导数</h3><h4 id="函数对称性"><a href="#函数对称性" class="headerlink" title="函数对称性"></a>函数对称性</h4><h5 id="抽象形式的对称"><a href="#抽象形式的对称" class="headerlink" title="抽象形式的对称"></a>抽象形式的对称</h5><p>$z=z(x,y),将x换为即得z _{y}=\phi_u u _{y}+\phi _{v}v _{y}；z _{xx}与z _{yy}的关系也一样$</p>
+<h5 id="具体变量的对称"><a href="#具体变量的对称" class="headerlink" title="具体变量的对称"></a>具体变量的对称</h5><p>$若f(x,y)=f (y,x), z=f (u (x),v (y)),则互换u (x),v (y),u’(x),v’(y),即可得从z _{x}得到z _{y};z _{xx}与z _{yy}也一样。$<br>此处具体变量的对称性</p>
+<h2 id="中值定理与微分应用"><a href="#中值定理与微分应用" class="headerlink" title="中值定理与微分应用"></a>中值定理与微分应用</h2><p>由于不给出罗尔定理的证明这里可以说一下大致思路：<br>由于连续函数则区间必有最值，如果两个最值均在端点处取到，则得出区间恒为定值，可得出导数=0；如果有一个不在端点处取到，则成为极值，可考察极值性质。</p>
+<p>定义极值点，$若x_0使得存在领域B _{r}(x _{0}) ,对任意的x \in B _{r}(x _{0}),f(x) \le或\ge f(x _{0}) 则称x_0为极值点$<br>费马引理：极值点导数=0；反证法</p>
+<h3 id="罗尔定理"><a href="#罗尔定理" class="headerlink" title="罗尔定理"></a>罗尔定理</h3><p>$函数f(x)在区间[a,b]上连续，在区间(a,b)上可导，且f(a)=f(b)。则有\eta \in (a,b),满足f’(\eta)=0;$<br>罗尔定理不给出证明</p>
+<h3 id="拉格朗日中值定理"><a href="#拉格朗日中值定理" class="headerlink" title="拉格朗日中值定理"></a>拉格朗日中值定理</h3><p>$函数f(x)在区间[a,b]上连续，在区间(a,b)上可导。则有\eta \in (a,b),满足f’(\eta)=\frac{f(b)-f(a)}{b-a};$<br>证明</p>
+<h3 id="柯西中值定理"><a href="#柯西中值定理" class="headerlink" title="柯西中值定理"></a>柯西中值定理</h3><p>$函数f(x),g(x)在区间[a,b]上连续，在区间(a,b)上可导。则有\eta \in (a,b),满足\frac{f’(\eta)}{g’(\eta)}=\frac{f(b)-f(a)}{g(b)-g(a)};$<br>证明</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>从几何的角度来理解证明的过程：罗尔中值定理是基本，拉格朗日中值定理是对坐标进行了线性变换的罗尔中值定理，柯西中值定理是参数化曲线的罗尔中值定理。</p>
+<h3 id="洛必达法则"><a href="#洛必达法则" class="headerlink" title="洛必达法则"></a>洛必达法则</h3><p>洛必达法则要利用柯西中值定理来证明，这要求洛必达法则的使用条件是$f(x),g(x)在x_{0}邻域有连续导数$<br>证明：</p>
+<h3 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h3><h4 id="皮亚诺余项"><a href="#皮亚诺余项" class="headerlink" title="皮亚诺余项"></a>皮亚诺余项</h4><h4 id="拉格朗日余项"><a href="#拉格朗日余项" class="headerlink" title="拉格朗日余项"></a>拉格朗日余项</h4><h4 id="柯西余项"><a href="#柯西余项" class="headerlink" title="柯西余项"></a>柯西余项</h4><h4 id="积分余项"><a href="#积分余项" class="headerlink" title="积分余项"></a>积分余项</h4><h2 id="空间解析几何"><a href="#空间解析几何" class="headerlink" title="空间解析几何"></a>空间解析几何</h2><h3 id="二次型理论"><a href="#二次型理论" class="headerlink" title="二次型理论"></a>二次型理论</h3><h3 id="曲线和曲面"><a href="#曲线和曲面" class="headerlink" title="曲线和曲面"></a>曲线和曲面</h3><h3 id="柱面和旋转面"><a href="#柱面和旋转面" class="headerlink" title="柱面和旋转面"></a>柱面和旋转面</h3><h2 id="不定积分与定积分"><a href="#不定积分与定积分" class="headerlink" title="不定积分与定积分"></a>不定积分与定积分</h2><h2 id="重积分"><a href="#重积分" class="headerlink" title="重积分"></a>重积分</h2><h2 id="微分方程"><a href="#微分方程" class="headerlink" title="微分方程"></a>微分方程</h2><h2 id="线、面积分"><a href="#线、面积分" class="headerlink" title="线、面积分"></a>线、面积分</h2><h2 id="常数项级数"><a href="#常数项级数" class="headerlink" title="常数项级数"></a>常数项级数</h2><h2 id="函数项级数"><a href="#函数项级数" class="headerlink" title="函数项级数"></a>函数项级数</h2>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/16/nand2tetris/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/08/16/nand2tetris/" itemprop="url">nand2tetris</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-08-16T07:41:53+08:00">
+                2021-08-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Nand2Tetris"><a href="#Nand2Tetris" class="headerlink" title="Nand2Tetris"></a>Nand2Tetris</h1><h2 id="0-0参考资料"><a href="#0-0参考资料" class="headerlink" title="$0.0参考资料"></a>$0.0参考资料</h2><p>书籍：“The Elements of Computing Systems Building a Modern Computer from First Principles” by Noam Nisan, Shimon Schocken<br>课程地址：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1g4411A7iU?from=search&amp;seid=822062230973599238">https://www.bilibili.com/video/BV1g4411A7iU?from=search&amp;seid=822062230973599238</a></p>
+<h2 id="0-1课外链接"><a href="#0-1课外链接" class="headerlink" title="$0.1课外链接"></a>$0.1课外链接</h2><p>github:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/SamyPesse/How-to-Make-a-Computer-Operating-System">https://github.com/SamyPesse/How-to-Make-a-Computer-Operating-System</a><br>（此为一个开源的操作系统）</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/SerenityOS/serenity">https://github.com/SerenityOS/serenity</a></li>
+</ul>
+<h2 id="1第一章布尔逻辑"><a href="#1第一章布尔逻辑" class="headerlink" title="$1第一章布尔逻辑"></a>$1第一章布尔逻辑</h2><p>这章我最想说明两个问题：</p>
+<ol>
+<li><p>abstraction(抽象)：讨论是什么。这个是什么，指的是功能上的描述，或者叫下定义，架构在此abstraction基础上的事物只需要利用这个abstraction而不需要关注具体实现的细节。举例：尽管实现与非门有各种各样的工艺、材料、方法，但是这是(implementation)层次的具体细节，我们封闭不管。我们所关心的内容——无论是如何实现的与非门，其逻辑功能是不变的——也正是我们关心的。因此，我们抽象出与非门这个概念，凡是能实现这个逻辑功能的东西都和与非门等价。后续本门课所有的内容都在利用与非门的abstraction。</p>
+</li>
+<li><p>implementation(实现)：讨论如何。也就是利用上一级的abstraction使得某一abstraction（人脑中的概念）变成事实上的内容。举例：如何具体制造出与非门。需要半导体物理以及电子方面的知识。</p>
+</li>
+</ol>
+<p>Remark:</p>
+<blockquote>
+<p>有关abstraction和implementation需要注意的事情：抽象应该是唯一的；实现是多样的。抽象应该具有完备性：也就是在某一层进行实现时，本层提供的抽象应该完全能够实现所有功能。实现应该具备短视性：我们仅用与目标层相邻底层提供的抽象就应该足够实现目标层的抽象。抽象不仅仅是一个方法这么简单，其隐含的是一种哲学思想，抽象在某种程度上，与哲学中利用概念的方法是类似的，但是不同的是，我们要做的是利用抽象上升到更高层抽象；</p>
+</blockquote>
+<p>在第一章所创造的各种硬件芯片中，唯一值得注意的是多路数据选择器和多路数据分配器在数据传输中的应用。以及数据选择器可以作为控制逻辑出现。</p>
+<h2 id="2第二章逻辑代数"><a href="#2第二章逻辑代数" class="headerlink" title="$2第二章逻辑代数"></a>$2第二章逻辑代数</h2><p>这一章，让我们理解基本的逻辑代数运算可以做什么工作。事实上，它可以完成逻辑控制和算术运算的两种工作。</p>
+<p>$$ f _{i _{m}}\dotsb f _{i _{1}}( x_1  \dots x_n   ) $$<br>可证明所有算法可写成如上图所示过程，其中 $x_1  \dots x_n$ 为数据段，$a_1  \dots a_n$为控制段，这两者合在一起可以完成算术操作和逻辑控制。</p>
+<h3 id="ALU的制作过程"><a href="#ALU的制作过程" class="headerlink" title="ALU的制作过程"></a>ALU的制作过程</h3><p>首先得出期望操作集$S$（此处需要一些证明，证明所有的算法最终都可以看作是一些操作的有限组合）<br>其次得出组成期望操作集可以由最小的哪些操作$U$按一定顺序构成</p>
+<p>将输入分成两段：$(i_1…i_m,x_1…x_n)$有i代表控制段，x代表数据段</p>
+<p>应该这么说：$对任意s\in S，$<br>然后着手进行实现最小操作，和逻辑控制功能（<strong>因为事实上我们不仅要在输入前使每一个$f_i_k(x_1…x_n)有明确定义$还要建立其</strong>）</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/15/javalearning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/08/15/javalearning/" itemprop="url">javalearning</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-08-15T22:49:11+08:00">
+                2021-08-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/notebook-code/" itemprop="url" rel="index">
+                    <span itemprop="name">notebook - code</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>java</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/15/puheping/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/08/15/puheping/" itemprop="url">puheping</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-08-15T22:15:30+08:00">
+                2021-08-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/notebook-subject-math-practice/" itemprop="url" rel="index">
+                    <span itemprop="name">notebook - subject - math -practice</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li><a href="#%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%AB%9E%E8%B5%9B%E6%95%99%E7%A8%8B%E6%B5%A6%E5%92%8C%E5%B9%B3">大学生竞赛教程（浦和平）</a><ul>
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E8%BF%9E%E7%BB%AD">第一章函数、极限、连续</a><ul>
+<li><a href="#%E4%BE%8B%E9%A2%981">例题1</a></li>
+<li><a href="#%E4%B9%A0%E9%A2%981">习题1</a></li>
+<li><a href="#%E7%BB%BC%E5%90%88%E9%A2%981">综合题1</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86%E5%AD%A6">第二章一元函数微分学</a><ul>
+<li><a href="#%E4%BE%8B%E9%A2%982">例题2</a></li>
+<li><a href="#%E4%B9%A0%E9%A2%982">习题2</a></li>
+<li><a href="#%E7%BB%BC%E5%90%88%E9%A2%982">综合题2</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86%E5%AD%A6">第三章一元函数积分学</a><ul>
+<li><a href="#%E4%BE%8B%E9%A2%983">例题3</a></li>
+<li><a href="#%E4%B9%A0%E9%A2%983">习题3</a></li>
+<li><a href="#%E7%BB%BC%E5%90%88%E9%A2%983">综合题3</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86%E5%AD%A6">第四章多元函数微分学</a><ul>
+<li><a href="#%E4%BE%8B%E9%A2%984">例题4</a><ul>
+<li><a href="#%E4%BE%8B10">例10</a></li>
+<li><a href="#%E4%BE%8B11">例11</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B9%A0%E9%A2%984">习题4</a></li>
+<li><a href="#%E7%BB%BC%E5%90%88%E9%A2%984">综合题4</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E4%BA%94%E7%AB%A0%E5%A4%9A%E5%85%83%E6%95%B0%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86%E5%AD%A6">第五章多元数量值函数积分学</a><ul>
+<li><a href="#%E4%BE%8B%E9%A2%985">例题5</a></li>
+<li><a href="#%E4%B9%A0%E9%A2%985">习题5</a></li>
+<li><a href="#%E7%BB%BC%E5%90%88%E9%A2%985">综合题5</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E5%85%AD%E7%AB%A0%E5%A4%9A%E5%85%83%E5%90%91%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0%E7%A7%AF%E5%88%86%E5%AD%A6">第六章多元向量值函数积分学</a><ul>
+<li><a href="#%E4%BE%8B%E9%A2%986">例题6</a></li>
+<li><a href="#%E4%B9%A0%E9%A2%986">习题6</a></li>
+<li><a href="#%E7%BB%BC%E5%90%88%E9%A2%986">综合题6</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E4%B8%83%E7%AB%A0%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B">第七章常微分方程</a><ul>
+<li><a href="#%E4%BE%8B%E9%A2%987">例题7</a></li>
+<li><a href="#%E4%B9%A0%E9%A2%987">习题7</a></li>
+<li><a href="#%E7%BB%BC%E5%90%88%E9%A2%987">综合题7</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%97%A0%E7%A9%B7%E7%BA%A7%E6%95%B0">第八章无穷级数</a><ul>
+<li><a href="#%E4%BE%8B%E9%A2%988">例题8</a></li>
+<li><a href="#%E4%B9%A0%E9%A2%988">习题8</a></li>
+<li><a href="#%E7%BB%BC%E5%90%88%E9%A2%988">综合题8</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="大学生竞赛教程（浦和平）"><a href="#大学生竞赛教程（浦和平）" class="headerlink" title="大学生竞赛教程（浦和平）"></a>大学生竞赛教程（浦和平）</h1><h2 id="第一章函数、极限、连续"><a href="#第一章函数、极限、连续" class="headerlink" title="第一章函数、极限、连续"></a>第一章函数、极限、连续</h2><h3 id="例题1"><a href="#例题1" class="headerlink" title="例题1"></a>例题1</h3><h3 id="习题1"><a href="#习题1" class="headerlink" title="习题1"></a>习题1</h3><h3 id="综合题1"><a href="#综合题1" class="headerlink" title="综合题1"></a>综合题1</h3><h2 id="第二章一元函数微分学"><a href="#第二章一元函数微分学" class="headerlink" title="第二章一元函数微分学"></a>第二章一元函数微分学</h2><h3 id="例题2"><a href="#例题2" class="headerlink" title="例题2"></a>例题2</h3><h3 id="习题2"><a href="#习题2" class="headerlink" title="习题2"></a>习题2</h3><h3 id="综合题2"><a href="#综合题2" class="headerlink" title="综合题2"></a>综合题2</h3><h2 id="第三章一元函数积分学"><a href="#第三章一元函数积分学" class="headerlink" title="第三章一元函数积分学"></a>第三章一元函数积分学</h2><h3 id="例题3"><a href="#例题3" class="headerlink" title="例题3"></a>例题3</h3><h3 id="习题3"><a href="#习题3" class="headerlink" title="习题3"></a>习题3</h3><h3 id="综合题3"><a href="#综合题3" class="headerlink" title="综合题3"></a>综合题3</h3><h2 id="第四章多元函数微分学"><a href="#第四章多元函数微分学" class="headerlink" title="第四章多元函数微分学"></a>第四章多元函数微分学</h2><h3 id="例题4"><a href="#例题4" class="headerlink" title="例题4"></a>例题4</h3><h4 id="例10"><a href="#例10" class="headerlink" title="例10"></a>例10</h4><ol>
+<li>有时某些多项式组合利用一些著名不等式要快一些。</li>
+<li>注意解析几何中三角形面积的求法（主要注意叉乘后得到的是一个向量，要继续对向量求长度）</li>
+</ol>
+<h4 id="例11"><a href="#例11" class="headerlink" title="例11"></a>例11</h4><p>注：</p>
+<ol>
+<li>解方程组求驻点时，要尽量利用L函数中自变量的对称性，使计算简便。若该题中有$x,y,z \gt 0$的限制，其对称性表现为$x ^{2},y ^{2}$对称，则有$x=\pm$</li>
+</ol>
+<h3 id="习题4"><a href="#习题4" class="headerlink" title="习题4"></a>习题4</h3><h3 id="综合题4"><a href="#综合题4" class="headerlink" title="综合题4"></a>综合题4</h3><h2 id="第五章多元数量值函数积分学"><a href="#第五章多元数量值函数积分学" class="headerlink" title="第五章多元数量值函数积分学"></a>第五章多元数量值函数积分学</h2><h3 id="例题5"><a href="#例题5" class="headerlink" title="例题5"></a>例题5</h3><h3 id="习题5"><a href="#习题5" class="headerlink" title="习题5"></a>习题5</h3><h3 id="综合题5"><a href="#综合题5" class="headerlink" title="综合题5"></a>综合题5</h3><h2 id="第六章多元向量值函数积分学"><a href="#第六章多元向量值函数积分学" class="headerlink" title="第六章多元向量值函数积分学"></a>第六章多元向量值函数积分学</h2><h3 id="例题6"><a href="#例题6" class="headerlink" title="例题6"></a>例题6</h3><h3 id="习题6"><a href="#习题6" class="headerlink" title="习题6"></a>习题6</h3><h3 id="综合题6"><a href="#综合题6" class="headerlink" title="综合题6"></a>综合题6</h3><h2 id="第七章常微分方程"><a href="#第七章常微分方程" class="headerlink" title="第七章常微分方程"></a>第七章常微分方程</h2><h3 id="例题7"><a href="#例题7" class="headerlink" title="例题7"></a>例题7</h3><h3 id="习题7"><a href="#习题7" class="headerlink" title="习题7"></a>习题7</h3><h3 id="综合题7"><a href="#综合题7" class="headerlink" title="综合题7"></a>综合题7</h3><h2 id="第八章无穷级数"><a href="#第八章无穷级数" class="headerlink" title="第八章无穷级数"></a>第八章无穷级数</h2><h3 id="例题8"><a href="#例题8" class="headerlink" title="例题8"></a>例题8</h3><h3 id="习题8"><a href="#习题8" class="headerlink" title="习题8"></a>习题8</h3><h3 id="综合题8"><a href="#综合题8" class="headerlink" title="综合题8"></a>综合题8</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/13/mathcontest/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/08/13/mathcontest/" itemprop="url">mathcontest</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-08-13T12:26:37+08:00">
+                2021-08-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/notebook-subject-math-contest/" itemprop="url" rel="index">
+                    <span itemprop="name">notebook -subject -math -contest</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="极限和连续"><a href="#极限和连续" class="headerlink" title="极限和连续"></a>极限和连续</h2><p>极限是一种思想</p>
+<p>我们逼近不规则图像的面积<br>事实上根本不是计算不规则图形的面积——而是定义不规则图形的面积。</p>
+<p>p165例9</p>
+<p>具体问题要具体分析</p>
+<p>什么时候可以部分算，什么必须要整体算</p>
+<h2 id="中值定理与微分应用；"><a href="#中值定理与微分应用；" class="headerlink" title="中值定理与微分应用；"></a>中值定理与微分应用；</h2><p>任何一条曲线都应该有一个柱面通过它</p>
+<p>空间曲线向平面曲线转化</p>
+<p>空间曲线的常见研究方法：参数方程</p>
+<p>曲线的参数化问题：<br>如果能找到一个柱面通过空间曲线，可以先参数化柱面方程（也就是参数化投影），之后再利用另一个方程完成另一个变量的参数化</p>
+<p>求空间曲线的旋转面方程</p>
+<p>曲面的参数化：</p>
+<p>空间曲线在坐标面上的投影<br>设空间曲线 $C$的一般方程为</p>
+<p>$$<br>F(x,y,z)=0<br>$$<br>$$<br>G(x,y,z)=0<br>$$</p>
+<p>消去z变量得到</p>
+<p>二重积分换元法所满足的条件等价于隐函数定理中的条件。</p>
+<h2 id="定积分不定积分"><a href="#定积分不定积分" class="headerlink" title="定积分不定积分"></a>定积分不定积分</h2><p>定积分转化成二重积分来计算，重点是差形式转变成积分形式，利用二重积分换元。<br>定积分转化成含参变量积分。<br>定理（含参变量积分的可微性）：</p>
+<p>结伴法和打表法：</p>
+<p>对称区间法：（不是对称区间的积分，可以通过换元转化为对称区间）</p>
+<p>幂级数逐项积分法</p>
+<p>尝试法</p>
+<p>分部积分得递推公式</p>
+<p>计算定积分，除了线性性进行变换之外，很重要的一点是</p>
+<p>什么时候用夹逼准则，什么时候用积分——首项和尾项为等价无穷小可以考虑用夹逼准则，不是等价无穷小要考虑利用积分</p>
+<p>等价是一致与参数无关很重要</p>
+<p>不是等价无穷小不能直接只靠夹逼</p>
+<p>积分有两个要素：1、被积函数；2、积分区间；</p>
+<p>学会推广的思想，离散和连续（求和与积分）</p>
+<p>抽象函数尽量与求导公式与积分公式联系起来</p>
+<p>重积分两个要素：1、积分区域；2、被积函数</p>
+<p>线性和（双线性函数）经常要考虑向量点乘。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/11/vim/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/08/11/vim/" itemprop="url">vim</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-08-11T14:54:25+08:00">
+                2021-08-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/notebook-code-editor/" itemprop="url" rel="index">
+                    <span itemprop="name">notebook - code - editor</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>vim</strong> 作为linux下最强大的编辑器，我先行学习使用也是为了便于后续进一步进行编程。</p>
+<ul>
+<li><a href="#lesson-1">Lesson 1</a><ul>
+<li><a href="#cursor-move">cursor move</a></li>
+<li><a href="#start-vim-from-the-shell-prompt-type">start vim from the shell prompt type</a></li>
+<li><a href="#delete-the-charactor-at-the-cursor-type">delete the charactor at the cursor type</a></li>
+<li><a href="#to-insert-or-append-text-type">To insert or append text type</a></li>
+</ul>
+</li>
+<li><a href="#lesson-2">Lesson 2</a><ul>
+<li><a href="#deletion-commands">DELETION COMMANDS</a></li>
+<li><a href="#move-to-the-start">MOVE TO THE START</a></li>
+<li><a href="#undo-commands">UNDO COMMANDS</a></li>
+</ul>
+</li>
+<li><a href="#lesson-3">Lesson 3</a><ul>
+<li><a href="#the-put-command">THE PUT COMMAND</a></li>
+<li><a href="#the-replace-command">THE REPLACE COMMAND</a></li>
+<li><a href="#the-change-operator">THE CHANGE OPERATOR</a></li>
+</ul>
+</li>
+<li><a href="#lesson-4">Lesson 4</a><ul>
+<li><a href="#goto-command">GOTO COMMAND</a></li>
+<li><a href="#the-search-command">THE SEARCH COMMAND</a></li>
+<li><a href="#the-match-command">THE MATCH COMMAND</a></li>
+<li><a href="#thesubstitute-command">THE　SUBSTITUTE COMMAND</a></li>
+</ul>
+</li>
+<li><a href="#execute-an-external-command">EXECUTE AN EXTERNAL COMMAND</a><ul>
+<li><a href="#write-files">WRITE FILES</a></li>
+<li><a href="#more-on-write-files">MORE ON WRITE FILES</a></li>
+<li><a href="#retrieving-and-merging-files">RETRIEVING AND MERGING files</a></li>
+</ul>
+</li>
+<li><a href="#lesson-6">Lesson 6</a></li>
+<li><a href="#lesson-7">Lesson 7</a><ul>
+<li><a href="#completion">COMPLETION</a></li>
+</ul>
+</li>
+</ul>
+<p>模式分类</p>
+<ol>
+<li>command mode</li>
+<li>insert mode</li>
+</ol>
+<p>这种模式分类可以使我们利用键盘完成全部任务，不必分心去动鼠标。<br>有关模式切换，现下只了解两点：</p>
+<ul>
+<li>无论当前处于何种mode输入Esc总可以退回到command mode。</li>
+<li>press i enter insert mode</li>
+</ul>
+<h1 id="Lesson-1"><a href="#Lesson-1" class="headerlink" title="Lesson 1"></a>Lesson 1</h1><h2 id="cursor-move"><a href="#cursor-move" class="headerlink" title="cursor move"></a>cursor move</h2><p>h(left) &emsp; j(down) &emsp;   k(up) &emsp; l(right)</p>
+<h2 id="start-vim-from-the-shell-prompt-type"><a href="#start-vim-from-the-shell-prompt-type" class="headerlink" title="start vim from the shell prompt type"></a>start vim from the shell prompt type</h2><p>command: vim FILENAME &lt;ENTER&gt;</p>
+<h2 id="delete-the-charactor-at-the-cursor-type"><a href="#delete-the-charactor-at-the-cursor-type" class="headerlink" title="delete the charactor at the cursor type"></a>delete the charactor at the cursor type</h2><p>x</p>
+<h2 id="To-insert-or-append-text-type"><a href="#To-insert-or-append-text-type" class="headerlink" title="To insert or append text type"></a>To insert or append text type</h2><ul>
+<li>i &emsp; type inserted text:insert before the cursor</li>
+<li>A&emsp; type inserted text &lt;ESC&gt;: append after the line</li>
+</ul>
+<h1 id="Lesson-2"><a href="#Lesson-2" class="headerlink" title="Lesson 2"></a>Lesson 2</h1><h2 id="DELETION-COMMANDS"><a href="#DELETION-COMMANDS" class="headerlink" title="DELETION COMMANDS"></a>DELETION COMMANDS</h2><p>dw to delete a word when we are in the command mode.</p>
+<p>d$ to delete to the end of the linewhen we are in the command mode.</p>
+<p><strong>command grammar</strong><br>operator [count] motion</p>
+<p>[x] x means the element of the set of parameters that can be put onto that location.</p>
+<p>operator:</p>
+<p>Now we just learn d operator for delete.</p>
+<p>motion:</p>
+<ul>
+<li>w - until the start or the next word, EXCLUDING its first character.</li>
+<li>e - to the end of the current word, INCLUDING the last character.</li>
+<li>$ - to the end of line, INCLUDING the last character.<br>For example, d2w means delete 2 words from the cursor.</li>
+</ul>
+<h2 id="MOVE-TO-THE-START"><a href="#MOVE-TO-THE-START" class="headerlink" title="MOVE TO THE START"></a>MOVE TO THE START</h2><p>type 0</p>
+<h2 id="UNDO-COMMANDS"><a href="#UNDO-COMMANDS" class="headerlink" title="UNDO COMMANDS"></a>UNDO COMMANDS</h2><p>To undo previous actions, type: &emsp;&emsp;&emsp;u &emsp;(lowercase u)<br>To undo all the changes on a line, type: &emsp;&emsp;&emsp;U &emsp;(uppercase U)<br>To undo the undo’s, type: &emsp;&emsp;&emsp;CTRL-R</p>
+<h1 id="Lesson-3"><a href="#Lesson-3" class="headerlink" title="Lesson 3"></a>Lesson 3</h1><h2 id="THE-PUT-COMMAND"><a href="#THE-PUT-COMMAND" class="headerlink" title="THE PUT COMMAND"></a>THE PUT COMMAND</h2><p>function:Type p to put previously deleted text after the cursor.</p>
+<h2 id="THE-REPLACE-COMMAND"><a href="#THE-REPLACE-COMMAND" class="headerlink" title="THE REPLACE COMMAND"></a>THE REPLACE COMMAND</h2><p>function type rx to replace the character at the cursor with x.(under the condition that it is in the command mode)</p>
+<h2 id="THE-CHANGE-OPERATOR"><a href="#THE-CHANGE-OPERATOR" class="headerlink" title="THE CHANGE OPERATOR"></a>THE CHANGE OPERATOR</h2><p>grammar:<br>operator [number] motion<br>c$(from the line where cursor is placed)<br>c2e<br>…</p>
+<h1 id="Lesson-4"><a href="#Lesson-4" class="headerlink" title="Lesson 4"></a>Lesson 4</h1><h2 id="GOTO-COMMAND"><a href="#GOTO-COMMAND" class="headerlink" title="GOTO COMMAND"></a>GOTO COMMAND</h2><p>CTRL-G:show information about the current file and current line’s number.<br>G go to the last line of the file<br>gg go to the first line of the file<br>[number] G go to the numberth line of the file</p>
+<h2 id="THE-SEARCH-COMMAND"><a href="#THE-SEARCH-COMMAND" class="headerlink" title="THE SEARCH COMMAND"></a>THE SEARCH COMMAND</h2><p>type / followed by a  phrase to search for the phrase<br>n:next(in one direction)<br>N:Next(in the other direction)<br>?:search for a phrase in the backward direction.<br>CTRL-o go back to where you came from<br>CTRL-i goes forward</p>
+<h2 id="THE-MATCH-COMMAND"><a href="#THE-MATCH-COMMAND" class="headerlink" title="THE MATCH COMMAND"></a>THE MATCH COMMAND</h2><p>% is used to match ‘{}’,’[]’ and ‘()’</p>
+<h2 id="THE-SUBSTITUTE-COMMAND"><a href="#THE-SUBSTITUTE-COMMAND" class="headerlink" title="THE　SUBSTITUTE COMMAND"></a>THE　SUBSTITUTE COMMAND</h2><p>decide what function these commands below means:</p>
+<p>s/old/new(/g)<br>#,#s/old/new/g<br>%s/old/new/g<br>%s/old/new/gc</p>
+<h1 id="EXECUTE-AN-EXTERNAL-COMMAND"><a href="#EXECUTE-AN-EXTERNAL-COMMAND" class="headerlink" title="EXECUTE AN EXTERNAL COMMAND"></a>EXECUTE AN EXTERNAL COMMAND</h1><p>type :! followed by an external command to execute that command</p>
+<h2 id="WRITE-FILES"><a href="#WRITE-FILES" class="headerlink" title="WRITE FILES"></a>WRITE FILES</h2><p>:w FILENAME</p>
+<h2 id="MORE-ON-WRITE-FILES"><a href="#MORE-ON-WRITE-FILES" class="headerlink" title="MORE ON WRITE FILES"></a>MORE ON WRITE FILES</h2><p>v motion :w FILENAME</p>
+<h2 id="RETRIEVING-AND-MERGING-files"><a href="#RETRIEVING-AND-MERGING-files" class="headerlink" title="RETRIEVING AND MERGING files"></a>RETRIEVING AND MERGING files</h2><p>:r FILENAME: to insert the contents of a file——retrieves disk file FILENAME and puts it below the cursor position</p>
+<h1 id="Lesson-6"><a href="#Lesson-6" class="headerlink" title="Lesson 6"></a>Lesson 6</h1><ol>
+<li>Type o to open a line BELOW　the cursor and start Insert mode.</li>
+<li>Type O to open a line ABOVE the cursor.</li>
+<li>Type a to insert text AFTER the cursor.</li>
+<li>Type A to insert text after the end of the line.</li>
+<li>The y(for yank) operator yanks text, p puts (pastes) it.</li>
+<li>Typing a capital R enters Replace mode until &lt;ESC&gt; is pressed.</li>
+<li>Typing “:set xxx” sets the option “xxx”. Some options are:</li>
+</ol>
+<ul>
+<li>‘ic’ ‘ignorecase</li>
+<li>‘is’ ‘incsearch’</li>
+<li>‘hls’ ‘hlsearch’</li>
+</ul>
+<p>what are these three options means?</p>
+<h1 id="Lesson-7"><a href="#Lesson-7" class="headerlink" title="Lesson 7"></a>Lesson 7</h1><h2 id="COMPLETION"><a href="#COMPLETION" class="headerlink" title="COMPLETION"></a>COMPLETION</h2><p>CTRL-D and &lt;TAB&gt; 但是貌似只能在命令模式下补全。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="" />
+          <p class="site-author-name" itemprop="name"></p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
