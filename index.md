@@ -19,11 +19,11 @@ We highly recommend you use UCTB and looking forward to your feedback.
 
 # Publications
 
-Name with * means equally contribution.
+Name with ^ means equally contribution.
 
 + Y. Xiang, **J. Fang**, C. Li, H. Yuan, Y. Song, J. Chen, “[Effective AOI-level Parcel Volume Prediction: When Lookahead Parcels Matter](https://openreview.net/pdf?id=2CQETd0fum)”. KDD 2025.
 
-+ **J. Fang***, L. Chen*, D. Chai*, Y. Hong, X. Xie, L. Chen, L. Wang, “[UCTB: An Urban Computing Tool Box for Building Spatiotemporal Prediction Services](https://ieeexplore.ieee.org/abstract/document/10664322/)”. SSE 2024.
++ **J. Fang^**, L. Chen^, D. Chai^, Y. Hong, X. Xie, L. Chen, L. Wang, “[UCTB: An Urban Computing Tool Box for Building Spatiotemporal Prediction Services](https://ieeexplore.ieee.org/abstract/document/10664322/)”. SSE 2024.
 
 + L. Chen, **J. Fang**, T. Liu, S. Cao, L. Wang, “[A Unified Model for Spatio-Temporal Prediction Queries with Arbitrary Modifiable Areal Units](https://arxiv.org/abs/2403.07022)”. ICDE 2024.
 
