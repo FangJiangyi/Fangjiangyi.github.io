@@ -21,7 +21,7 @@ We highly recommend you use UCTB and looking forward to your feedback.
 
 Name with ^ means equally contribution.
 
-+ **J. Fang**, B. Zhou, H. Wang, X. Zhu, L. Wang, “Effective Online 3D Bin Packing with Lookahead Parcels Using Monte Carlo Tree Search”. KDD 2026.
++ **J. Fang**, B. Zhou, H. Wang, X. Zhu, L. Wang, “Effective Online 3D Bin Packing with Lookahead Parcels Using Monte Carlo Tree Search”. KDD 2026. [[Arxiv](https://arxiv.org/abs/2601.02649)]
 
 + **J. Fang^**, L. Chen^, D. Chai^, Y. Hong, X. Xie, L. Chen, Leye Wang. “[UCTB: an Urban Computing Tool Box for All-in-one Spatiotemporal Prediction Solution](https://link.springer.com/article/10.1007/s42486-025-00187-y)”. CCF Trans. Pervasive Computing and Interaction (2025).
 
