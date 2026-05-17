@@ -12,6 +12,10 @@ Currently, I am a PhD student supervised by Prof. [Leye Wang](https://wangleye.g
 
 We highly recommend you use UCTB and looking forward to your feedback.
 
+**3D Bin Packing Lab** (3DBP-Lab) is a research-oriented organization providing [awesome resources](https://github.com/3DBP-Lab/awesome-bin-packing-with-robotic-arms) for bin packing with robotic arms, including surveys, benchmarks, algorithms, methods, and representative studies for 2D/3D bin packing problems. It focuses on robotic bin packing scenarios that require spatial reasoning, physical understanding, and intelligent decision-making, with applications in logistics, warehouse automation, and embodied intelligence.
+
+We highly recommend you follow 3DBP-Lab and look forward to your feedback.
+
 # Education Experience
 
 - 2019~2023 School of Artificial Intelligence and Automation, Huazhong University of Science and Technology.
