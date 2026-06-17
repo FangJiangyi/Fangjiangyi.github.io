@@ -5,6 +5,8 @@ Currently, I am a PhD student supervised by Prof. [Leye Wang](https://wangleye.g
 
 **[Google Scholar](https://scholar.google.com/citations?user=7XOy-jkAAAAJ&hl=en&oi=ao)**
 
+**[Blog](/blog/)**
+
 
 # Highlight Research Project
 
